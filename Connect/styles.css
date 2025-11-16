@@ -1,3 +1,14 @@
+/* Override parent green styles for Connect page */
+body.connect-page {
+  background: linear-gradient(135deg, #c084fc 0%, #e879f9 25%, #f0abfc 50%, #fbbf24 75%, #fde68a 100%) !important;
+  background-attachment: fixed !important;
+  color: #ffffff !important;
+}
+
+body.connect-page * {
+  color: inherit;
+}
+
 /* Variables */
 :root {
   /* Connect App Colors - Purple to Peach Gradient */
@@ -8,9 +19,9 @@
   --gradient-mid: #e879f9;
   --gradient-end: #fcd34d;
 
-  /* Text Colors */
-  --text-light: #ffffff;
-  --text-bright: #fef3c7;
+  /* Text Colors - Override parent */
+  --text-light: #ffffff !important;
+  --text-bright: #fef3c7 !important;
   --text-dark: #1e293b;
   --text-muted: #94a3b8;
 
