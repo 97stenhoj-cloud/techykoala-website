@@ -5,38 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Connect - Transform everyday moments into meaningful conversations through card-based question games.">
     <title>Connect - Meaningful Conversations | TechyKoala</title>
-    <!-- Block parent styles from being inherited -->
-    <style>
-        /* Critical overrides to block green styles */
-        body.connect-page,
-        body.connect-page * {
-            --jungle-green: #c084fc !important;
-            --forest-emerald: #e879f9 !important;
-            --spring-green: #f0abfc !important;
-            --mint-light: #fbbf24 !important;
-            --text-bright: #ffffff !important;
-            --text-light-green: #fef3c7 !important;
-        }
-    </style>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/AppIcon.png">
 </head>
-<body class="connect-page" style="background: linear-gradient(135deg, #c084fc 0%, #e879f9 25%, #f0abfc 50%, #fbbf24 75%, #fde68a 100%) !important; background-attachment: fixed !important;">
+<body data-page="connect">
     <!-- Animated Background -->
-    <div class="animated-background">
-        <div class="grid-layer"></div>
-        <div class="particles-layer"></div>
+    <div class="connect-animated-background">
+        <div class="connect-grid-layer"></div>
+        <div class="connect-particles-layer"></div>
     </div>
 
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="/" class="logo">
-                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/techykoalaIcon.png" alt="TechyKoala" class="logo-img">
+    <header class="connect-header">
+        <div class="connect-container">
+            <div class="connect-header-content">
+                <a href="/" class="connect-logo">
+                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/techykoalaIcon.png" alt="TechyKoala" class="connect-logo-img">
                     <span>Connect</span>
                 </a>
-                <nav class="nav">
+                <nav class="connect-nav">
                     <a href="/">TechyKoala</a>
                     <a href="#features">Features</a>
                     <a href="#pricing">Pricing</a>
@@ -47,26 +34,26 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/AppIcon.png" alt="Connect App" class="hero-logo" width="150" height="150" style="width: 150px !important; height: 150px !important; object-fit: contain !important;">
-                <h1 class="gradient-text">Meet Connect</h1>
-                <p class="hero-subtitle">Transform everyday moments into meaningful conversations through card-based question games designed for couples, friends, and families.</p>
-                <p class="dedication">Made for my beautiful wife, Otilia Stenhøj - With love and conversations 💜</p>
-                <div class="hero-buttons">
-                    <a href="#download" class="btn btn-primary"><span>Download Now</span></a>
-                    <a href="#features" class="btn btn-secondary"><span>Explore Features</span></a>
+    <section class="connect-hero">
+        <div class="connect-container">
+            <div class="connect-hero-content">
+                <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/AppIcon.png" alt="Connect App" class="connect-hero-logo">
+                <h1 class="connect-gradient-text">Meet Connect</h1>
+                <p class="connect-hero-subtitle">Transform everyday moments into meaningful conversations through card-based question games designed for couples, friends, and families.</p>
+                <p class="connect-dedication">Made for my beautiful wife, Otilia Stenhøj - With love and conversations 💜</p>
+                <div class="connect-hero-buttons">
+                    <a href="#download" class="connect-btn connect-btn-primary">Download Now</a>
+                    <a href="#features" class="connect-btn connect-btn-secondary">Explore Features</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Video Section -->
-    <section class="video-section">
-        <div class="container">
-            <div class="phone-container" style="width: 350px !important; max-width: 100% !important; margin: 0 auto;">
-                <video autoplay muted loop playsinline class="phone-video" style="width: 100% !important; height: auto !important; display: block;">
+    <section class="connect-video-section">
+        <div class="connect-container">
+            <div class="connect-phone-container">
+                <video autoplay muted loop playsinline class="connect-phone-video">
                     <source src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/video/Commercial%201.mp4" type="video/mp4">
                 </video>
             </div>
@@ -74,32 +61,32 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <h2 class="gradient-text">Five Ways to Connect</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/couple.png" alt="Couple Mode" class="feature-icon" width="80" height="80" style="width: 80px !important; height: 80px !important; object-fit: contain !important;">
+    <section id="features" class="connect-features">
+        <div class="connect-container">
+            <h2 class="connect-gradient-text">Five Ways to Connect</h2>
+            <div class="connect-features-grid">
+                <div class="connect-feature-card">
+                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/couple.png" alt="Couple Mode" class="connect-feature-icon">
                     <h3>💑 Couple Mode</h3>
                     <p>Romantic conversations to deepen emotional intimacy and strengthen your bond.</p>
                 </div>
-                <div class="feature-card">
-                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/friends.png" alt="Friends Mode" class="feature-icon" width="80" height="80" style="width: 80px !important; height: 80px !important; object-fit: contain !important;">
+                <div class="connect-feature-card">
+                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/friends.png" alt="Friends Mode" class="connect-feature-icon">
                     <h3>👥 Friends Mode</h3>
                     <p>Entertaining conversations for social gatherings and unforgettable moments.</p>
                 </div>
-                <div class="feature-card">
-                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/family.png" alt="Family Mode" class="feature-icon" width="80" height="80" style="width: 80px !important; height: 80px !important; object-fit: contain !important;">
+                <div class="connect-feature-card">
+                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/family.png" alt="Family Mode" class="connect-feature-icon">
                     <h3>👨‍👩‍👧‍👦 Family Mode</h3>
                     <p>Wholesome conversations perfect for all ages to bring families closer.</p>
                 </div>
-                <div class="feature-card">
-                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/personal.png" alt="Personal Mode" class="feature-icon" width="80" height="80" style="width: 80px !important; height: 80px !important; object-fit: contain !important;">
+                <div class="connect-feature-card">
+                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/personal.png" alt="Personal Mode" class="connect-feature-icon">
                     <h3>📝 Personal Mode</h3>
                     <p>Create custom question decks for any occasion, tailored to your needs.</p>
                 </div>
-                <div class="feature-card">
-                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/pandora.png" alt="Pandora Mode" class="feature-icon" width="80" height="80" style="width: 80px !important; height: 80px !important; object-fit: contain !important;">
+                <div class="connect-feature-card">
+                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/pandora.png" alt="Pandora Mode" class="connect-feature-icon">
                     <h3>🌟 Pandora Mode</h3>
                     <p>Real-time multiplayer sessions - connect with friends anywhere in the world.</p>
                 </div>
@@ -108,58 +95,58 @@
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <h2 class="gradient-text">Choose Your Plan</h2>
-            <div class="pricing-grid">
-                <div class="pricing-card">
+    <section id="pricing" class="connect-pricing">
+        <div class="connect-container">
+            <h2 class="connect-gradient-text">Choose Your Plan</h2>
+            <div class="connect-pricing-grid">
+                <div class="connect-pricing-card">
                     <h3>Free</h3>
-                    <div class="price">€0</div>
-                    <p class="price-period">forever</p>
-                    <ul class="features-list">
+                    <div class="connect-price">€0</div>
+                    <p class="connect-price-period">forever</p>
+                    <ul class="connect-features-list">
                         <li>✓ 30 questions per free category</li>
                         <li>✓ All 5 game modes</li>
                         <li>✓ Pandora multiplayer</li>
                         <li>• Ads included</li>
                     </ul>
-                    <a href="#download" class="btn btn-secondary"><span>Get Started</span></a>
+                    <a href="#download" class="connect-btn connect-btn-secondary">Get Started</a>
                 </div>
-                <div class="pricing-card featured">
-                    <div class="featured-badge">Most Popular</div>
+                <div class="connect-pricing-card connect-featured">
+                    <div class="connect-featured-badge">Most Popular</div>
                     <h3>Premium</h3>
-                    <div class="price">€6.99</div>
-                    <p class="price-period">per month</p>
-                    <ul class="features-list">
+                    <div class="connect-price">€6.99</div>
+                    <p class="connect-price-period">per month</p>
+                    <ul class="connect-features-list">
                         <li>✓ Unlimited questions</li>
                         <li>✓ Ad-free experience</li>
                         <li>✓ All game modes</li>
                         <li>✓ Priority support</li>
                     </ul>
-                    <a href="#download" class="btn btn-primary"><span>Go Premium</span></a>
-                    <p class="annual-note">Or save 29% with annual: €59.99/year</p>
+                    <a href="#download" class="connect-btn connect-btn-primary">Go Premium</a>
+                    <p class="connect-annual-note">Or save 29% with annual: €59.99/year</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Download Section -->
-    <section id="download" class="download">
-        <div class="container">
-            <h2 class="gradient-text">Download Connect Today</h2>
-            <p class="download-subtitle">Available for iOS and Android</p>
-            <div class="download-buttons">
-                <a href="#" class="store-btn">
-                    <div class="store-icon">🍎</div>
-                    <div class="store-text">
-                        <span class="store-label">Download on the</span>
-                        <span class="store-name">App Store</span>
+    <section id="download" class="connect-download">
+        <div class="connect-container">
+            <h2 class="connect-gradient-text">Download Connect Today</h2>
+            <p class="connect-download-subtitle">Available for iOS and Android</p>
+            <div class="connect-download-buttons">
+                <a href="#" class="connect-store-btn">
+                    <div class="connect-store-icon">🍎</div>
+                    <div class="connect-store-text">
+                        <span class="connect-store-label">Download on the</span>
+                        <span class="connect-store-name">App Store</span>
                     </div>
                 </a>
-                <a href="#" class="store-btn">
-                    <div class="store-icon">🤖</div>
-                    <div class="store-text">
-                        <span class="store-label">GET IT ON</span>
-                        <span class="store-name">Google Play</span>
+                <a href="#" class="connect-store-btn">
+                    <div class="connect-store-icon">🤖</div>
+                    <div class="connect-store-text">
+                        <span class="connect-store-label">GET IT ON</span>
+                        <span class="connect-store-name">Google Play</span>
                     </div>
                 </a>
             </div>
@@ -167,10 +154,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
+    <footer class="connect-footer">
+        <div class="connect-container">
+            <div class="connect-footer-content">
+                <div class="connect-footer-logo">
                     <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/techykoalaIcon.png" alt="TechyKoala">
                     <span>TechyKoala</span>
                 </div>
