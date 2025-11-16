@@ -36,765 +36,412 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
-
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "MobileApplication",
-        "name": "Connect",
-        "description": "Transform everyday moments into meaningful conversations with 1,200+ expertly crafted conversation starters for couples, friends, and families.",
-        "applicationCategory": "LifestyleApplication",
-        "operatingSystem": ["iOS", "Android"],
-        "offers": [
-            {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "USD",
-                "description": "Basic Plan - 100 free questions"
-            },
-            {
-                "@type": "Offer",
-                "price": "4.99",
-                "priceCurrency": "USD",
-                "description": "Premium Monthly - Unlimited questions"
-            },
-            {
-                "@type": "Offer",
-                "price": "39.99",
-                "priceCurrency": "USD",
-                "description": "Premium Annual - Save 33%"
-            }
-        ],
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "ratingCount": "10000",
-            "bestRating": "5",
-            "worstRating": "1"
-        },
-        "author": {
-            "@type": "Organization",
-            "name": "TechyKoala",
-            "url": "https://www.techykoala.com"
-        },
-        "screenshot": [
-            "https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/ConnectPreview/iphonepreview.mp4"
-        ]
-    }
-    </script>
-
-    <!-- Organization Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "TechyKoala",
-        "url": "https://www.techykoala.com",
-        "logo": "https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/AppIcon.png",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "",
-            "contactType": "customer service"
-        },
-        "sameAs": [
-            "https://apps.apple.com/app/connect",
-            "https://play.google.com/store/apps/details?id=com.techykoala.connect"
-        ]
-    }
-    </script>
-
-    <!-- FAQ Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "What is Connect?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Connect is a mobile app with 1,200+ conversation starters designed to help couples, friends, and families have meaningful conversations and strengthen their relationships."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Is Connect free to use?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes! Connect offers a free Basic plan with 100 conversation starters. For unlimited access to all 1,200+ questions and premium features, you can upgrade to our Premium plan."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What devices does Connect support?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Connect is available for both iOS (iPhone/iPad) and Android devices. You can download it from the App Store or Google Play Store."
-                }
-            }
-        ]
-    }
-    </script>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="site-header">
         <div class="container">
-            <div class="nav-wrapper">
-                <a href="#home" class="logo">
-                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/AppIcon.png" alt="Connect Logo">
-                    <span>Connect</span>
+            <div class="header-container">
+                <a href="/" class="logo">
+                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/techykoalaIcon.png" alt="TechyKoala Logo">
+                    <span>TechyKoala</span>
                 </a>
-                <div class="nav-menu" id="navMenu">
-                    <a href="#features" class="nav-link">Features</a>
-                    <a href="#benefits" class="nav-link">Benefits</a>
-                    <a href="#pricing" class="nav-link">Pricing</a>
-                    <a href="#testimonials" class="nav-link">Reviews</a>
-                    <a href="#download" class="nav-link nav-cta">Download</a>
+                <div class="main-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/Connect">Connect App</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
                 </div>
-                <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-bg">
-            <div class="hero-gradient"></div>
-            <div class="hero-pattern"></div>
-        </div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        Transform Small Talk Into
-                        <span class="gradient-text">Deep Connections</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        Break through surface-level conversations with 1,200+ expertly crafted questions.
-                        Perfect for couples, friends, and families ready to truly connect.
+    <main class="site-main connect-page">
+
+        <!-- Hero Section -->
+        <section class="hero" style="min-height: 90vh;">
+            <div class="container">
+                <div class="hero-content">
+                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/AppIcon.png"
+                         alt="Connect App"
+                         style="width: 120px; height: 120px; border-radius: 28px; margin-bottom: 30px; box-shadow: 0 12px 40px rgba(0,0,0,0.15);">
+                    <h1>Meet Connect</h1>
+                    <p style="font-size: 1.3rem; max-width: 700px; margin: 0 auto 20px;">
+                        Transform everyday moments into meaningful conversations through card-based question games designed for couples, friends, and families.
                     </p>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <span class="stat-number">1,200+</span>
-                            <span class="stat-label">Questions</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">5</span>
-                            <span class="stat-label">Game Modes</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">7</span>
-                            <span class="stat-label">Languages</span>
-                        </div>
-                    </div>
-                    <div class="hero-cta">
-                        <a href="https://apps.apple.com/app/connect" class="btn-download btn-ios">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on App Store">
-                        </a>
-                        <a href="https://play.google.com/store/apps/details?id=com.techykoala.connect" class="btn-download btn-android">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
-                        </a>
-                    </div>
-                    <p class="hero-note">
-                        <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                        </svg>
-                        Free to start • No credit card required
+                    <p style="font-size: 1.1rem; font-style: italic; color: var(--text-light); margin-bottom: 30px;">
+                        Made for my beautiful wife, Otilia Stenhøj - With love and conversations 💕
                     </p>
-                </div>
-                <div class="hero-visual">
-                    <div class="phone-mockup">
-                        <video autoplay muted loop playsinline class="hero-video">
+
+                    <!-- Commercial Video - Phone Size -->
+                    <div style="max-width: 380px; width: 90%; margin: 0 auto 40px; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3); border: 8px solid #1e293b;">
+                        <video
+                            controls
+                            muted
+                            autoplay
+                            loop
+                            playsinline
+                            style="width: 100%; height: auto; display: block;">
                             <source src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/video/Commercial%201.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="floating-cards">
-                        <div class="question-card card-1">
-                            <span class="card-emoji">💑</span>
-                            <p>"What makes you feel most loved?"</p>
+
+                    <div class="hero-buttons">
+                        <a href="#download" class="btn btn-primary">Download Now</a>
+                        <a href="#features" class="btn btn-secondary">Explore Features</a>
+                        <a href="https://www.instagram.com/connectapp.dk/" target="_blank" rel="noopener" class="btn btn-instagram">
+                            📸 Follow on Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Modes Section -->
+        <section id="features" class="section">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 60px;">Five Ways to Connect</h2>
+
+                <div class="grid grid-2">
+                    <!-- Couple Mode -->
+                    <div class="card">
+                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/couple.png"
+                             alt="Couple Mode"
+                             style="width: 80px; height: 80px; margin-bottom: 20px; border-radius: 16px;">
+                        <h3 style="color: var(--primary-pink); margin-bottom: 15px;">💕 Couple Mode</h3>
+                        <p style="margin-bottom: 20px;">Romantic conversations to deepen emotional intimacy</p>
+                        <div style="font-size: 0.9rem; line-height: 1.8; color: var(--text-primary);">
+                            <strong>Categories include:</strong><br>
+                            • Love Talks - Romance & connection<br>
+                            • Deep Talks - Values & vulnerability<br>
+                            • Silly Talks - Light-hearted fun<br>
+                            • Car Talks - Road trip conversations<br>
+                            • Spicy Talks - Intimate questions 🔒<br>
+                            • Love Languages Remix 🔒<br>
+                            <span style="font-size: 0.85rem; opacity: 0.8;">🔒 Premium categories</span>
                         </div>
-                        <div class="question-card card-2">
-                            <span class="card-emoji">👥</span>
-                            <p>"Share an unpopular opinion"</p>
+                    </div>
+
+                    <!-- Friends Mode -->
+                    <div class="card">
+                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/friends.png"
+                             alt="Friends Mode"
+                             style="width: 80px; height: 80px; margin-bottom: 20px; border-radius: 16px;">
+                        <h3 style="color: var(--primary-purple); margin-bottom: 15px;">🎉 Friends Mode</h3>
+                        <p style="margin-bottom: 20px;">Entertaining conversations for social gatherings</p>
+                        <div style="font-size: 0.9rem; line-height: 1.8; color: var(--text-primary);">
+                            <strong>Categories include:</strong><br>
+                            • Cozy Talks - Warm connection<br>
+                            • Silly Talks - Quirky fun<br>
+                            • Car Talks - Travel & adventure<br>
+                            • Party Night Talks 🔒<br>
+                            • Unpopular Opinions XL 🔒<br>
+                            • Plot Twists & Dilemmas 🔒<br>
+                            <span style="font-size: 0.85rem; opacity: 0.8;">🔒 Premium categories</span>
                         </div>
-                        <div class="question-card card-3">
-                            <span class="card-emoji">👨‍👩‍👧‍👦</span>
-                            <p>"Favorite family tradition?"</p>
+                    </div>
+
+                    <!-- Family Mode -->
+                    <div class="card">
+                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/family.png"
+                             alt="Family Mode"
+                             style="width: 80px; height: 80px; margin-bottom: 20px; border-radius: 16px;">
+                        <h3 style="color: var(--accent-peach); margin-bottom: 15px;">👨‍👩‍👧‍👦 Family Mode</h3>
+                        <p style="margin-bottom: 20px;">Wholesome conversations perfect for all ages</p>
+                        <div style="font-size: 0.9rem; line-height: 1.8; color: var(--text-primary);">
+                            <strong>Categories include:</strong><br>
+                            • Silly Talks - Family fun<br>
+                            • Cozy Talks - Heartfelt moments<br>
+                            • History Talks - Family stories 🔒<br>
+                            • Tiny Talks - Ages 3-9 🔒<br>
+                            • The Good Old Days 🔒<br>
+                            • Would You Rather 🔒<br>
+                            <span style="font-size: 0.85rem; opacity: 0.8;">🔒 Premium categories</span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Five Ways to Connect</h2>
-                <p class="section-subtitle">
-                    Choose your perfect conversation mode and start meaningful dialogues today
-                </p>
-            </div>
-            <div class="features-grid">
-                <!-- Couple Mode -->
-                <div class="feature-card" data-mode="couple">
-                    <div class="feature-icon">
-                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/couple.png" alt="Couple Mode">
+                    <!-- Personal Mode -->
+                    <div class="card">
+                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/personal.png"
+                             alt="Personal Mode"
+                             style="width: 80px; height: 80px; margin-bottom: 20px; border-radius: 16px;">
+                        <h3 style="color: var(--primary-pink); margin-bottom: 15px;">✏️ Personal Mode 🔒</h3>
+                        <p style="margin-bottom: 20px;">Create unlimited custom question decks (Premium)</p>
+                        <div style="font-size: 0.9rem; line-height: 1.8; color: var(--text-primary);">
+                            <strong>Features:</strong><br>
+                            • Build personalized collections<br>
+                            • Minimum 5 questions to play<br>
+                            • Shuffle and reorder<br>
+                            • Favorites from any mode ❤️<br>
+                        </div>
                     </div>
-                    <h3>Couple Mode</h3>
-                    <p class="feature-description">
-                        Deepen your romantic connection with Love Talks, Deep Talks, and Spicy Talks
-                    </p>
-                    <div class="feature-categories">
-                        <span class="category-tag">Love Talks</span>
-                        <span class="category-tag">Deep Talks</span>
-                        <span class="category-tag premium">Spicy Talks</span>
-                    </div>
-                    <div class="question-examples">
-                        <p class="example-question">"What moment made you realize you were in love?"</p>
-                        <p class="example-question">"How can I make you feel more appreciated?"</p>
-                    </div>
-                </div>
 
-                <!-- Friends Mode -->
-                <div class="feature-card" data-mode="friends">
-                    <div class="feature-icon">
-                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/friends.png" alt="Friends Mode">
-                    </div>
-                    <h3>Friends Mode</h3>
-                    <p class="feature-description">
-                        Turn any gathering into an unforgettable experience with party games and debates
-                    </p>
-                    <div class="feature-categories">
-                        <span class="category-tag">Party Night</span>
-                        <span class="category-tag premium">Unpopular Opinions XL</span>
-                    </div>
-                    <div class="question-examples">
-                        <p class="example-question">"What's your most controversial food opinion?"</p>
-                        <p class="example-question">"Never have I ever..."</p>
-                    </div>
-                </div>
-
-                <!-- Family Mode -->
-                <div class="feature-card" data-mode="family">
-                    <div class="feature-icon">
-                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/family.png" alt="Family Mode">
-                    </div>
-                    <h3>Family Mode</h3>
-                    <p class="feature-description">
-                        Create lasting memories with questions perfect for all ages and generations
-                    </p>
-                    <div class="feature-categories">
-                        <span class="category-tag">Tiny Talks</span>
-                        <span class="category-tag">History Talks</span>
-                    </div>
-                    <div class="question-examples">
-                        <p class="example-question">"What's your favorite family memory?"</p>
-                        <p class="example-question">"If you could have any superpower..."</p>
-                    </div>
-                </div>
-
-                <!-- Personal Mode -->
-                <div class="feature-card" data-mode="personal">
-                    <div class="feature-icon">
-                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/personal.png" alt="Personal Mode">
-                    </div>
-                    <h3>Personal Mode</h3>
-                    <p class="feature-description">
-                        Create custom question decks tailored to your unique relationships and occasions
-                    </p>
-                    <div class="feature-categories">
-                        <span class="category-tag">Custom Decks</span>
-                        <span class="category-tag premium">Unlimited Questions</span>
-                    </div>
-                    <div class="question-examples">
-                        <p class="example-question">Design your own conversation starters</p>
-                        <p class="example-question">Save and share with others</p>
-                    </div>
-                </div>
-
-                <!-- Pandora Mode -->
-                <div class="feature-card featured" data-mode="pandora">
-                    <div class="feature-badge">NEW</div>
-                    <div class="feature-icon">
-                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/pandora.png" alt="Pandora Mode">
-                    </div>
-                    <h3>Pandora Mode</h3>
-                    <p class="feature-description">
-                        Connect in real-time with friends anywhere in the world through live sessions
-                    </p>
-                    <div class="feature-categories">
-                        <span class="category-tag">Multiplayer</span>
-                        <span class="category-tag premium">Real-time Sync</span>
-                    </div>
-                    <div class="question-examples">
-                        <p class="example-question">Play together even when apart</p>
-                        <p class="example-question">Perfect for long-distance relationships</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section id="benefits" class="benefits">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Why Conversations Matter</h2>
-                <p class="section-subtitle">
-                    Discover how Connect transforms relationships one question at a time
-                </p>
-            </div>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                        </svg>
-                    </div>
-                    <h3>Deepen Relationships</h3>
-                    <p>Move beyond small talk to build genuine emotional intimacy with those who matter most.</p>
-                    <blockquote class="benefit-quote">
-                        "We've been married 10 years, but Connect helped us discover things we never knew about each other."
-                        <cite>- Sarah & Michael</cite>
-                    </blockquote>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                    </div>
-                    <h3>Break the Ice</h3>
-                    <p>Turn awkward silences into engaging conversations at parties, dates, or family gatherings.</p>
-                    <blockquote class="benefit-quote">
-                        "Best party game ever! Had everyone laughing and sharing stories all night."
-                        <cite>- James, 28</cite>
-                    </blockquote>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                    </div>
-                    <h3>Create Quality Time</h3>
-                    <p>Replace screen time with meaningful face-to-face interactions that strengthen bonds.</p>
-                    <blockquote class="benefit-quote">
-                        "Our weekly Connect night has become a cherished family tradition."
-                        <cite>- The Johnson Family</cite>
-                    </blockquote>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                        </svg>
-                    </div>
-                    <h3>Discover Yourself</h3>
-                    <p>Gain insights into your own thoughts, values, and dreams through guided reflection.</p>
-                    <blockquote class="benefit-quote">
-                        "The questions made me think about what I really want from life."
-                        <cite>- Maria, 34</cite>
-                    </blockquote>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Start Free, Upgrade Anytime</h2>
-                <p class="section-subtitle">
-                    Choose the plan that fits your connection journey
-                </p>
-            </div>
-            <div class="pricing-wrapper">
-                <div class="pricing-toggle">
-                    <span class="toggle-label">Monthly</span>
-                    <label class="toggle-switch">
-                        <input type="checkbox" id="billingToggle">
-                        <span class="toggle-slider"></span>
-                    </label>
-                    <span class="toggle-label">Annual <span class="save-badge">Save 29%</span></span>
-                </div>
-
-                <div class="pricing-cards">
-                    <!-- Free Plan -->
-                    <div class="pricing-card">
-                        <div class="plan-header">
-                            <h3>Free</h3>
-                            <div class="plan-price">
-                                <span class="price">€0</span>
-                                <span class="period">forever</span>
+                    <!-- Pandora Mode -->
+                    <div class="card pandora-card">
+                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/pandora.png"
+                             alt="Pandora Mode"
+                             style="width: 80px; height: 80px; margin-bottom: 20px; border-radius: 16px;">
+                        <h3 style="color: var(--primary-purple); margin-bottom: 15px;">🎲 Pandora Mode - Multiplayer Magic</h3>
+                        <p style="margin-bottom: 20px; font-size: 1.1rem;">Real-time collaborative question game where everyone contributes!</p>
+                        <div class="pandora-grid">
+                            <div>
+                                <strong>1. Host Creates</strong><br>
+                                <span style="font-size: 0.9rem;">Start session & share PIN code</span>
+                            </div>
+                            <div>
+                                <strong>2. Players Join</strong><br>
+                                <span style="font-size: 0.9rem;">Max 6 free, unlimited premium</span>
+                            </div>
+                            <div>
+                                <strong>3. Everyone Submits</strong><br>
+                                <span style="font-size: 0.9rem;">Min 5, max 12 free questions</span>
+                            </div>
+                            <div>
+                                <strong>4. Host Controls</strong><br>
+                                <span style="font-size: 0.9rem;">Set timers (1-15 min)</span>
+                            </div>
+                            <div>
+                                <strong>5. React Together</strong><br>
+                                <span style="font-size: 0.9rem;">Emoji reactions during play</span>
+                            </div>
+                            <div>
+                                <strong>6. Privacy First</strong><br>
+                                <span style="font-size: 0.9rem;">Questions deleted after session</span>
                             </div>
                         </div>
-                        <ul class="plan-features">
-                            <li>
-                                <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                </svg>
-                                30 questions per free category
-                            </li>
-                            <li>
-                                <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                </svg>
-                                All 5 game modes
-                            </li>
-                            <li>
-                                <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                </svg>
-                                5-question preview of premium
-                            </li>
-                            <li>
-                                <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                </svg>
-                                Basic Pandora mode
-                            </li>
-                            <li class="feature-disabled">
-                                <svg class="icon-x" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                                </svg>
-                                Contains ads
-                            </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features -->
+        <section class="section" style="background: rgba(255, 255, 255, 0.3);">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 60px;">Why You'll Love Connect</h2>
+                <div class="grid grid-3">
+                    <div class="card" style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">🎨</div>
+                        <h3>Beautiful Design</h3>
+                        <p>Full-screen questions with cozy gradient backgrounds. Swipe or tap to navigate effortlessly.</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">☁️</div>
+                        <h3>Cloud Sync</h3>
+                        <p>Sign in with Google or Apple. Your favorites and custom decks sync across all devices.</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">🌍</div>
+                        <h3>7 Languages</h3>
+                        <p>English, Danish, German, Spanish, Portuguese, Romanian, and French support.</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">🌙</div>
+                        <h3>Dark Mode</h3>
+                        <p>Beautiful light and dark themes that adapt to your preference and time of day.</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">❤️</div>
+                        <h3>Favorites System</h3>
+                        <p>Save questions from any mode by tapping the heart icon. Build your collection.</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">🔐</div>
+                        <h3>Privacy First</h3>
+                        <p>Your conversations stay yours. Transparent data handling and no tracking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="section" style="padding: 80px 0;">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 60px;">Simple, Honest Pricing</h2>
+
+                <div class="grid grid-2" style="max-width: 900px; margin: 0 auto; gap: 40px;">
+                    <!-- Free Tier -->
+                    <div class="card pricing-card free">
+                        <h3>Free Forever</h3>
+                        <div class="price-display">
+                            <span class="price-number">0</span>
+                            <span class="price-currency">DKK</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>✓ 3 categories per mode</li>
+                            <li>✓ 30 questions per category</li>
+                            <li>✓ 5-question previews of premium</li>
+                            <li>✓ Pandora: Max 6 players</li>
+                            <li>✓ Pandora: Max 12 questions</li>
+                            <li>• Ads every 7 questions</li>
+                            <li>• Basic navigation</li>
                         </ul>
-                        <a href="#download" class="btn btn-secondary">Start Free</a>
+                        <a href="#download" class="btn btn-secondary">Try Free</a>
                     </div>
 
-                    <!-- Premium Plan -->
-                    <div class="pricing-card featured">
-                        <div class="plan-badge">Most Popular</div>
-                        <div class="plan-header">
-                            <h3>Premium</h3>
-                            <div class="plan-price">
-                                <span class="price">
-                                    <span class="monthly-price">€6.99</span>
-                                    <span class="annual-price" style="display:none">€59.99</span>
-                                </span>
-                                <span class="period">
-                                    <span class="monthly-period">per month</span>
-                                    <span class="annual-period" style="display:none">per year</span>
-                                </span>
-                            </div>
+                    <!-- Premium Tier -->
+                    <div class="card pricing-card premium">
+                        <div class="premium-badge">⭐ MOST POPULAR</div>
+                        <h3>Premium</h3>
+
+                        <div class="price-display">
+                            <span class="price-number">49</span>
+                            <span class="price-currency">DKK</span>
+                            <span class="price-period">/month</span>
                         </div>
-                        <ul class="plan-features">
-                            <li>
-                                <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                </svg>
-                                <strong>1,200+ questions</strong> unlimited
-                            </li>
-                            <li>
-                                <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                </svg>
-                                <strong>Ad-free</strong> experience
-                            </li>
-                            <li>
-                                <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                </svg>
-                                <strong>Premium categories</strong> (Spicy, Deep)
-                            </li>
-                            <li>
-                                <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                </svg>
-                                <strong>Enhanced Pandora</strong> multiplayer
-                            </li>
-                            <li>
-                                <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                </svg>
-                                <strong>Priority support</strong>
-                            </li>
+
+                        <div class="price-annual">
+                            <span>or</span>
+                            <strong>399 DKK/year</strong>
+                            <div class="savings-badge">💰 Save 189 DKK (32% off!)</div>
+                        </div>
+
+                        <ul class="pricing-features premium-features">
+                            <li>✓ <strong>24+ premium categories</strong> unlocked</li>
+                            <li>✓ <strong>75 questions</strong> per category</li>
+                            <li>✓ <strong>No ads</strong> forever</li>
+                            <li>✓ Pandora: <strong>Unlimited</strong> players</li>
+                            <li>✓ Personal Mode: <strong>Unlimited</strong> decks</li>
+                            <li>✓ <strong>Jump to any question</strong></li>
+                            <li>✓ <strong>Favorites</strong> across all modes</li>
+                            <li>✓ Support ongoing <strong>development</strong></li>
                         </ul>
-                        <a href="#download" class="btn btn-primary">Go Premium</a>
-                        <p class="plan-note">
-                            <span class="monthly-note">Or save 29% with annual billing</span>
-                            <span class="annual-note" style="display:none">You're saving €24 per year!</span>
-                        </p>
+
+                        <a href="#download" class="btn btn-primary">Get Premium Now</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Real Stories, Real Connections</h2>
-                <p class="section-subtitle">
-                    Join thousands who've transformed their relationships with Connect
-                </p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="rating">
-                        ⭐⭐⭐⭐⭐
+        <!-- How It Works -->
+        <section class="section" style="background: rgba(255, 255, 255, 0.3);">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 60px;">How It Works</h2>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h3 style="color: var(--primary-pink);">1. Choose Your Mode</h3>
+                        <p style="font-size: 1.1rem;">Pick from Couple, Friends, Family, Personal, or Pandora based on who you're with.</p>
                     </div>
-                    <p class="testimonial-text">
-                        "After 15 years of marriage, we thought we knew everything about each other. Connect proved us wrong in the best way possible. We're talking like we did when we first met!"
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">LK</div>
-                        <div>
-                            <p class="author-name">Lisa & Kevin</p>
-                            <p class="author-meta">Couple Mode Users</p>
-                        </div>
+                    <div class="card">
+                        <h3 style="color: var(--primary-purple);">2. Pick a Category</h3>
+                        <p style="font-size: 1.1rem;">Select from conversation styles - cozy, deep, silly, or adventurous.</p>
                     </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="rating">
-                        ⭐⭐⭐⭐⭐
+                    <div class="card">
+                        <h3 style="color: var(--accent-peach);">3. Start Talking</h3>
+                        <p style="font-size: 1.1rem;">Full-screen questions appear. Swipe or tap arrows to navigate.</p>
                     </div>
-                    <p class="testimonial-text">
-                        "Game night will never be the same! The Unpopular Opinions mode had everyone in stitches. Finally, an app that gets people off their phones and actually talking."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">AT</div>
-                        <div>
-                            <p class="author-name">Alex Turner</p>
-                            <p class="author-meta">Friends Mode Fan</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="rating">
-                        ⭐⭐⭐⭐⭐
-                    </div>
-                    <p class="testimonial-text">
-                        "Three generations, one app, countless memories. My kids are learning family stories I forgot I knew. Thank you for bringing us closer together."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">RC</div>
-                        <div>
-                            <p class="author-name">Robert Chen</p>
-                            <p class="author-meta">Family Mode User</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="rating">
-                        ⭐⭐⭐⭐⭐
-                    </div>
-                    <p class="testimonial-text">
-                        "Long distance is hard, but Pandora mode makes it bearable. Every Sunday, my girlfriend and I connect from different countries. It's our virtual date night essential."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">MS</div>
-                        <div>
-                            <p class="author-name">Marco Silva</p>
-                            <p class="author-meta">Pandora Mode User</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="rating">
-                        ⭐⭐⭐⭐⭐
-                    </div>
-                    <p class="testimonial-text">
-                        "As a therapist, I recommend Connect to couples all the time. It opens communication channels in a fun, non-threatening way. Brilliant concept!"
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">Dr.JP</div>
-                        <div>
-                            <p class="author-name">Dr. Jennifer Park</p>
-                            <p class="author-meta">Relationship Therapist</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="rating">
-                        ⭐⭐⭐⭐⭐
-                    </div>
-                    <p class="testimonial-text">
-                        "The personal mode is genius! Created a custom deck for our anniversary dinner. My wife cried happy tears. Worth every penny of premium."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">DM</div>
-                        <div>
-                            <p class="author-name">David Martinez</p>
-                            <p class="author-meta">Premium User</p>
-                        </div>
+                    <div class="card">
+                        <h3 style="color: var(--primary-pink);">4. Connect Deeper</h3>
+                        <p style="font-size: 1.1rem;">Heart your favorites, create custom decks, and discover new ways to connect.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number" data-target="50000">0</div>
-                    <p class="stat-label">Happy Users</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-target="1200">0</div>
-                    <p class="stat-label">Questions Available</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-target="7">0</div>
-                    <p class="stat-label">Languages Supported</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-rating">4.8</div>
-                    <p class="stat-label">App Store Rating</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Download CTA Section -->
-    <section id="download" class="download-cta">
-        <div class="container">
-            <div class="download-content">
-                <h2 class="download-title">
-                    Ready to Start Your First
-                    <span class="gradient-text">Meaningful Conversation?</span>
-                </h2>
-                <p class="download-subtitle">
-                    Download Connect now and transform how you connect with the people who matter most
-                </p>
-                <div class="download-buttons">
-                    <a href="https://apps.apple.com/app/connect" class="btn-download btn-ios">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on App Store">
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.techykoala.connect" class="btn-download btn-android">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
-                    </a>
-                </div>
-                <div class="download-features">
-                    <div class="download-feature">
-                        <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                        </svg>
-                        Works Offline
-                    </div>
-                    <div class="download-feature">
-                        <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                        </svg>
-                        Privacy Focused
-                    </div>
-                    <div class="download-feature">
-                        <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                        </svg>
-                        Regular Updates
+        <!-- Download Section -->
+        <section id="download" class="section">
+            <div class="container">
+                <div class="card download-card">
+                    <h2>Start Connecting Today</h2>
+                    <p>Available on iOS and Android. Download now and try Connect free!</p>
+                    <div class="download-buttons">
+                        <a href="https://apps.apple.com/app/connect" class="btn btn-primary">
+                            🍎 App Store
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.techykoala.connect" class="btn btn-primary">
+                            🤖 Google Play
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section" style="background: rgba(255, 255, 255, 0.3);">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 60px;">Frequently Asked Questions</h2>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="margin-bottom: 15px;">Is Connect really free?</h3>
+                        <p>Yes! Connect is free forever with 3 categories per mode, 30 questions each. Upgrade to Premium for 24+ categories, 75 questions each, and no ads.</p>
+                    </div>
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="margin-bottom: 15px;">What's the difference between modes?</h3>
+                        <p>Each mode is designed for different relationships: Couple (romantic), Friends (social fun), Family (all ages), Personal (custom decks), and Pandora (multiplayer).</p>
+                    </div>
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="margin-bottom: 15px;">How does Pandora Mode work?</h3>
+                        <p>The host creates a session and shares a PIN. Everyone joins, submits questions, and the host controls the game. Questions are deleted after the session for privacy.</p>
+                    </div>
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="margin-bottom: 15px;">Can I try premium categories first?</h3>
+                        <p>Yes! Every premium category offers a 5-question preview so you can try before upgrading.</p>
+                    </div>
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="margin-bottom: 15px;">What languages do you support?</h3>
+                        <p>Connect is available in English, Danish, German, Spanish, Portuguese, Romanian, and French.</p>
+                    </div>
+                    <div class="card">
+                        <h3 style="margin-bottom: 15px;">How do I cancel my subscription?</h3>
+                        <p>Manage subscriptions through the App Store or Google Play. Cancel anytime - no questions asked.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section cta-section">
+            <div class="container">
+                <h2>Ready to Transform Your Conversations?</h2>
+                <p>Join thousands discovering deeper connections through meaningful conversations.</p>
+                <a href="#download" class="btn btn-primary">Download Connect Now</a>
+            </div>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-main">
-                    <div class="footer-brand">
-                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/AppIcon.png" alt="Connect" class="footer-logo">
-                        <h3>Connect</h3>
-                        <p>Transform everyday moments into meaningful conversations</p>
-                        <div class="language-selector">
-                            <select aria-label="Language">
-                                <option value="en">English</option>
-                                <option value="da">Dansk</option>
-                                <option value="de">Deutsch</option>
-                                <option value="es">Español</option>
-                                <option value="pt">Português</option>
-                                <option value="ro">Română</option>
-                                <option value="fr">Français</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="footer-links">
-                        <div class="footer-column">
-                            <h4>Product</h4>
-                            <a href="#features">Features</a>
-                            <a href="#pricing">Pricing</a>
-                            <a href="#download">Download</a>
-                            <a href="#">Updates</a>
-                        </div>
-
-                        <div class="footer-column">
-                            <h4>Support</h4>
-                            <a href="#">Help Center</a>
-                            <a href="#">Contact Us</a>
-                            <a href="#">FAQ</a>
-                            <a href="#">Feedback</a>
-                        </div>
-
-                        <div class="footer-column">
-                            <h4>Company</h4>
-                            <a href="https://www.techykoala.com">About TechyKoala</a>
-                            <a href="#">Privacy Policy</a>
-                            <a href="#">Terms of Service</a>
-                            <a href="#">Press Kit</a>
-                        </div>
-
-                        <div class="footer-column">
-                            <h4>Connect</h4>
-                            <div class="social-links">
-                                <a href="#" aria-label="Facebook">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                                    </svg>
-                                </a>
-                                <a href="#" aria-label="Instagram">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
-                                    </svg>
-                                </a>
-                                <a href="#" aria-label="Twitter">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="footer-column">
+                    <h3>🐨 TechyKoala</h3>
+                    <p>Building cozy digital experiences that bring people together.</p>
                 </div>
 
-                <div class="footer-bottom">
-                    <p>&copy; 2024 TechyKoala. All rights reserved.</p>
-                    <p>Made with ❤️ for meaningful conversations</p>
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="/Connect">Connect App</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#download">Download</a></li>
+                    </ul>
                 </div>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.instagram.com/connectapp.dk/">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechyKoala. All rights reserved. Made with 💕 and care.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
