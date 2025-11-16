@@ -4,237 +4,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Connect - Transform everyday moments into meaningful conversations through card-based question games.">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     <title>Connect - Meaningful Conversations for Couples, Friends & Families</title>
-    <link rel="stylesheet" href="styles-new.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/AppIcon.png">
 </head>
-<body class="connect-page">
+<body>
     <!-- Header -->
-    <header class="site-header">
+    <header class="header">
         <div class="container">
-            <div class="header-container">
+            <div class="header-content">
                 <a href="/" class="logo">
-                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/techykoalaIcon.png" alt="TechyKoala">
+                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/techykoalaIcon.png" alt="TechyKoala" class="logo-img">
                     <span>Connect</span>
                 </a>
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="/">← TechyKoala</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#download">Download</a></li>
-                    </ul>
+                <nav class="nav">
+                    <a href="/">← TechyKoala</a>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#download">Download</a>
                 </nav>
             </div>
         </div>
     </header>
 
-    <main class="site-main">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/AppIcon.png" alt="Connect App" class="hero-logo">
-                    <h1>Meet Connect</h1>
-                    <p>Transform everyday moments into meaningful conversations through card-based question games designed for couples, friends, and families.</p>
-                    <p class="dedication">Made for my beautiful wife, Otilia Stenhøj - With love and conversations 💜</p>
-                    <div class="hero-buttons">
-                        <a href="#download" class="btn btn-primary">Download Now</a>
-                        <a href="#features" class="btn btn-secondary">Explore Features</a>
-                    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/AppIcon.png" alt="Connect App" class="hero-icon">
+            <h1>Meet Connect</h1>
+            <p class="hero-text">Transform everyday moments into meaningful conversations through card-based question games designed for couples, friends, and families.</p>
+            <p class="dedication">Made for my beautiful wife, Otilia Stenhøj - With love and conversations 💜</p>
+            <div class="hero-buttons">
+                <a href="#download" class="btn btn-primary">Download Now</a>
+                <a href="#features" class="btn btn-secondary">Explore Features</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="phone-mockup">
+                <video autoplay muted loop playsinline class="video">
+                    <source src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/video/Commercial%201.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Five Ways to Connect</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/couple.png" alt="Couple Mode" class="feature-icon">
+                    <h3>💑 Couple Mode</h3>
+                    <p>Romantic conversations to deepen emotional intimacy</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/friends.png" alt="Friends Mode" class="feature-icon">
+                    <h3>👥 Friends Mode</h3>
+                    <p>Entertaining conversations for social gatherings</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/family.png" alt="Family Mode" class="feature-icon">
+                    <h3>👨‍👩‍👧‍👦 Family Mode</h3>
+                    <p>Wholesome conversations perfect for all ages</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/personal.png" alt="Personal Mode" class="feature-icon">
+                    <h3>📝 Personal Mode</h3>
+                    <p>Create custom question decks for any occasion</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/pandora.png" alt="Pandora Mode" class="feature-icon">
+                    <h3>🌟 Pandora Mode</h3>
+                    <p>Real-time multiplayer sessions with friends anywhere</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Video Commercial Section -->
-        <section class="video-section">
-            <div class="container">
-                <div class="video-container">
-                    <video autoplay muted loop playsinline class="commercial-video">
-                        <source src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/video/Commercial%201.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Choose Your Plan</h2>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3>Free</h3>
+                    <div class="price">€0</div>
+                    <p class="price-period">forever</p>
+                    <ul>
+                        <li>✓ 30 questions per free category</li>
+                        <li>✓ All 5 game modes</li>
+                        <li>✓ Pandora multiplayer</li>
+                    </ul>
+                    <a href="#download" class="btn btn-secondary">Get Started</a>
+                </div>
+                <div class="price-card featured">
+                    <span class="badge">Most Popular</span>
+                    <h3>Premium</h3>
+                    <div class="price">€6.99</div>
+                    <p class="price-period">per month</p>
+                    <ul>
+                        <li>✓ Unlimited questions</li>
+                        <li>✓ Ad-free experience</li>
+                        <li>✓ All game modes</li>
+                        <li>✓ Priority support</li>
+                    </ul>
+                    <a href="#download" class="btn btn-primary">Go Premium</a>
+                    <p class="annual">Or €59.99/year (save 29%)</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Game Modes Section -->
-        <section id="features" class="section">
-            <div class="container">
-                <h2>Five Ways to Connect</h2>
-                
-                <div class="grid grid-2">
-                    <!-- Couple Mode -->
-                    <div class="card">
-                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/couple.png" alt="Couple Mode" class="mode-icon">
-                        <h3 class="pink">💑 Couple Mode</h3>
-                        <p>Romantic conversations to deepen emotional intimacy</p>
-                        <div class="categories">
-                            <strong>Categories include:</strong><br>
-                            • Love Talks - Romance & connection<br>
-                            • Deep Talks - Values & vulnerability<br>
-                            • Silly Talks - Light-hearted fun<br>
-                            • Car Talks - Road trip conversations<br>
-                            • Spicy Talks - Intimate questions 🔒<br>
-                            • Love Languages Remix 🔒
-                        </div>
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <h2>Download Connect Today</h2>
+            <p>Available for iOS and Android</p>
+            <div class="download-buttons">
+                <a href="#" class="store-btn">
+                    <span class="store-icon">🍎</span>
+                    <div>
+                        <div class="store-label">Download on the</div>
+                        <div class="store-name">App Store</div>
                     </div>
-
-                    <!-- Friends Mode -->
-                    <div class="card">
-                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/friends.png" alt="Friends Mode" class="mode-icon">
-                        <h3 class="purple">👥 Friends Mode</h3>
-                        <p>Entertaining conversations for social gatherings</p>
-                        <div class="categories">
-                            <strong>Categories include:</strong><br>
-                            • Cozy Talks - Warm connection<br>
-                            • Silly Talks - Quirky fun<br>
-                            • Car Talks - Travel & adventure<br>
-                            • Party Night Talks 🔒<br>
-                            • Unpopular Opinions XL 🔒<br>
-                            • Plot Twists & Dilemmas 🔒
-                        </div>
+                </a>
+                <a href="#" class="store-btn">
+                    <span class="store-icon">📱</span>
+                    <div>
+                        <div class="store-label">GET IT ON</div>
+                        <div class="store-name">Google Play</div>
                     </div>
-
-                    <!-- Family Mode -->
-                    <div class="card">
-                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/family.png" alt="Family Mode" class="mode-icon">
-                        <h3 class="peach">👨‍👩‍👧‍👦 Family Mode</h3>
-                        <p>Wholesome conversations perfect for all ages</p>
-                        <div class="categories">
-                            <strong>Categories include:</strong><br>
-                            • Silly Talks - Family fun<br>
-                            • Cozy Talks - Heartfelt moments<br>
-                            • History Talks - Family stories 🔒<br>
-                            • Tiny Talks - Ages 3-9 🔒<br>
-                            • The Good Old Days 🔒<br>
-                            • Would You Rather 🔒
-                        </div>
-                    </div>
-
-                    <!-- Personal Mode -->
-                    <div class="card">
-                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/personal.png" alt="Personal Mode" class="mode-icon">
-                        <h3 class="green">📝 Personal Mode</h3>
-                        <p>Create custom question decks for any occasion - perfect for team building, classroom discussions, or your own unique scenarios.</p>
-                    </div>
-
-                    <!-- Pandora Mode -->
-                    <div class="card">
-                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/pandora.png" alt="Pandora Mode" class="mode-icon">
-                        <h3 class="teal">🌟 Pandora Mode</h3>
-                        <p>Real-time multiplayer sessions - host or join games with friends anywhere in the world. Connect and play together instantly!</p>
-                    </div>
-                </div>
+                </a>
             </div>
-        </section>
-
-        <!-- Pricing Section -->
-        <section id="pricing" class="section">
-            <div class="container">
-                <h2>Choose Your Plan</h2>
-                
-                <div class="grid grid-2">
-                    <!-- Free Plan -->
-                    <div class="card">
-                        <h3>Free</h3>
-                        <div class="price">€0</div>
-                        <div class="price-period">forever</div>
-                        <ul class="features-list">
-                            <li>✓ 30 questions per free category</li>
-                            <li>✓ 5-question previews of premium content</li>
-                            <li>✓ All 5 game modes</li>
-                            <li>✓ Pandora multiplayer</li>
-                            <li>• Ads included</li>
-                        </ul>
-                        <a href="#download" class="btn btn-secondary">Get Started</a>
-                    </div>
-
-                    <!-- Premium Plan -->
-                    <div class="card premium-card">
-                        <div class="premium-badge">Most Popular</div>
-                        <h3>Premium</h3>
-                        <div class="price">€6.99</div>
-                        <div class="price-period">per month</div>
-                        <ul class="features-list">
-                            <li>✓ Unlimited questions</li>
-                            <li>✓ Ad-free experience</li>
-                            <li>✓ All 5 game modes</li>
-                            <li>✓ Enhanced multiplayer</li>
-                            <li>✓ Priority support</li>
-                        </ul>
-                        <a href="#download" class="btn btn-primary">Go Premium</a>
-                        <div class="annual-note">
-                            <p>Or save 29% with annual: <strong>€59.99/year</strong></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Download Section -->
-        <section id="download" class="section">
-            <div class="container">
-                <h2>Download Connect Today</h2>
-                <p class="download-subtitle">Available for iOS and Android</p>
-                <div class="download-buttons">
-                    <a href="#" class="store-btn app-store">
-                        <div class="store-icon">🍎</div>
-                        <div class="store-text">
-                            <div class="store-top">Download on the</div>
-                            <div class="store-bottom">App Store</div>
-                        </div>
-                    </a>
-                    <a href="#" class="store-btn google-play">
-                        <div class="store-icon">📱</div>
-                        <div class="store-text">
-                            <div class="store-top">GET IT ON</div>
-                            <div class="store-bottom">Google Play</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="site-footer">
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div>
-                    <div class="footer-logo">
-                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/techykoalaIcon.png" alt="TechyKoala">
-                        <span>TechyKoala</span>
-                    </div>
-                    <p>Building apps that bring people closer together</p>
-                </div>
-                <div>
-                    <h4>Products</h4>
-                    <ul>
-                        <li><a href="/Connect">Connect</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="/">About</a></li>
-                        <li><a href="/#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="/privacy">Privacy</a></li>
-                        <li><a href="/terms">Terms</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 TechyKoala. All rights reserved.</p>
-            </div>
+            <p>&copy; 2025 TechyKoala. All rights reserved.</p>
         </div>
     </footer>
 
