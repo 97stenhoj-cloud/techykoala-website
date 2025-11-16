@@ -5,11 +5,15 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: linear-gradient(180deg, #d8b4fe 0%, #fbbf24 100%);
-  background-attachment: fixed;
-  min-height: 100vh;
-  color: #1e293b;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  background: linear-gradient(180deg, #d8b4fe 0%, #fbbf24 100%) !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+  color: #1e293b !important;
+}
+
+html {
+  background: linear-gradient(180deg, #d8b4fe 0%, #fbbf24 100%) !important;
 }
 
 .container {
