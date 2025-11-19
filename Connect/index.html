@@ -102,7 +102,7 @@
         <!-- Game Modes Section -->
         <section id="features" class="section">
             <div class="container">
-                <h2 style="text-align: center; margin-bottom: 60px;">Five Ways to Connect</h2>
+                <h2 style="text-align: center; margin-bottom: 60px;">Six Ways to Connect</h2>
 
                 <div class="grid grid-2">
                     <!-- Couple Mode -->
@@ -212,6 +212,29 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Spark Mode - NEW! -->
+                    <div class="card" style="border: 2px solid var(--primary-purple); position: relative;">
+                        <div style="position: absolute; top: 10px; right: 10px; background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink)); color: white; padding: 6px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">✨ NEW!</div>
+                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/spark.png"
+                             alt="Spark Mode"
+                             style="width: 80px; height: 80px; margin-bottom: 20px; border-radius: 16px;">
+                        <h3 style="color: var(--primary-purple); margin-bottom: 15px;">✨ Spark Mode - AI-Powered Questions 🔒</h3>
+                        <p style="margin-bottom: 20px; font-size: 1.1rem;">Generate custom questions on-the-fly using AI tailored to your exact vibe!</p>
+                        <div style="font-size: 0.9rem; line-height: 1.8; color: var(--text-primary);">
+                            <strong>How it works:</strong><br>
+                            • Set Energy, Depth & Spice levels<br>
+                            • Choose group size & occasion<br>
+                            • AI generates unique questions instantly<br>
+                            • Questions expire after 24 hours<br>
+                            • Save favorites to your collection ❤️<br>
+                            <br>
+                            <strong>Monthly Limits:</strong><br>
+                            • Premium: 150 questions/month<br>
+                            • Premium+: 400 questions/month<br>
+                            <span style="font-size: 0.85rem; opacity: 0.8;">🔒 Premium or Premium+ required</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -260,13 +283,13 @@
             <div class="container">
                 <h2 style="text-align: center; margin-bottom: 60px;">Simple, Honest Pricing</h2>
 
-                <div class="grid grid-2" style="max-width: 900px; margin: 0 auto; gap: 40px;">
+                <div class="grid grid-2" style="max-width: 1200px; margin: 0 auto; gap: 30px;">
                     <!-- Free Tier -->
                     <div class="card pricing-card free">
                         <h3>Free Forever</h3>
                         <div class="price-display">
                             <span class="price-number">0</span>
-                            <span class="price-currency">DKK</span>
+                            <span class="price-currency">€</span>
                         </div>
                         <ul class="pricing-features">
                             <li>✓ 3 categories per mode</li>
@@ -274,30 +297,22 @@
                             <li>✓ 5-question previews of premium</li>
                             <li>✓ Pandora: Max 6 players</li>
                             <li>✓ Pandora: Max 12 questions</li>
+                            <li>✗ No Spark Mode access</li>
                             <li>• Ads every 7 questions</li>
                             <li>• Basic navigation</li>
                         </ul>
                         <a href="#download" class="btn btn-secondary">Try Free</a>
                     </div>
 
-                    <!-- Premium Tier -->
-                    <div class="card pricing-card premium">
-                        <div class="premium-badge">⭐ MOST POPULAR</div>
-                        <h3>Premium</h3>
-
+                    <!-- Basic Tier -->
+                    <div class="card pricing-card">
+                        <h3>Basic</h3>
                         <div class="price-display">
-                            <span class="price-number">49</span>
-                            <span class="price-currency">DKK</span>
+                            <span class="price-number">6.99</span>
+                            <span class="price-currency">€</span>
                             <span class="price-period">/month</span>
                         </div>
-
-                        <div class="price-annual">
-                            <span>or</span>
-                            <strong>399 DKK/year</strong>
-                            <div class="savings-badge">💰 Save 189 DKK (32% off!)</div>
-                        </div>
-
-                        <ul class="pricing-features premium-features">
+                        <ul class="pricing-features">
                             <li>✓ <strong>24+ premium categories</strong> unlocked</li>
                             <li>✓ <strong>75 questions</strong> per category</li>
                             <li>✓ <strong>No ads</strong> forever</li>
@@ -305,10 +320,50 @@
                             <li>✓ Personal Mode: <strong>Unlimited</strong> decks</li>
                             <li>✓ <strong>Jump to any question</strong></li>
                             <li>✓ <strong>Favorites</strong> across all modes</li>
+                            <li>✗ No Spark Mode access</li>
+                        </ul>
+                        <a href="#download" class="btn btn-primary">Get Basic</a>
+                    </div>
+
+                    <!-- Premium Tier -->
+                    <div class="card pricing-card premium" style="border: 2px solid var(--primary-purple);">
+                        <div class="premium-badge">⭐ MOST POPULAR</div>
+                        <h3>Premium</h3>
+                        <div class="price-display">
+                            <span class="price-number">11.99</span>
+                            <span class="price-currency">€</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <ul class="pricing-features premium-features">
+                            <li>✓ <strong>Everything in Basic</strong></li>
+                            <li>✓ ✨ <strong>Spark Mode access</strong></li>
+                            <li>✓ <strong>150 AI questions/month</strong></li>
+                            <li>✓ Custom Energy, Depth & Spice</li>
+                            <li>✓ Save Spark questions to favorites</li>
+                            <li>✓ Add Spark questions to decks</li>
                             <li>✓ Support ongoing <strong>development</strong></li>
                         </ul>
+                        <a href="#download" class="btn btn-primary">Get Premium</a>
+                    </div>
 
-                        <a href="#download" class="btn btn-primary">Get Premium Now</a>
+                    <!-- Premium+ Tier -->
+                    <div class="card pricing-card" style="border: 2px solid var(--primary-pink);">
+                        <div class="premium-badge" style="background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));">🚀 POWER USER</div>
+                        <h3>Premium+</h3>
+                        <div class="price-display">
+                            <span class="price-number">19.99</span>
+                            <span class="price-currency">€</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <ul class="pricing-features premium-features">
+                            <li>✓ <strong>Everything in Premium</strong></li>
+                            <li>✓ ✨ <strong>400 AI questions/month</strong></li>
+                            <li>✓ <strong>2.6x more</strong> Spark questions</li>
+                            <li>✓ Perfect for frequent users</li>
+                            <li>✓ Maximum creative freedom</li>
+                            <li>✓ Priority support</li>
+                        </ul>
+                        <a href="#download" class="btn btn-primary" style="background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));">Get Premium+</a>
                     </div>
                 </div>
             </div>
@@ -364,15 +419,19 @@
                 <div style="max-width: 800px; margin: 0 auto;">
                     <div class="card" style="margin-bottom: 20px;">
                         <h3 style="margin-bottom: 15px;">Is Connect really free?</h3>
-                        <p>Yes! Connect is free forever with 3 categories per mode, 30 questions each. Upgrade to Premium for 24+ categories, 75 questions each, and no ads.</p>
+                        <p>Yes! Connect is free forever with 3 categories per mode, 30 questions each. Choose from Basic (€6.99/mo), Premium (€11.99/mo with Spark Mode), or Premium+ (€19.99/mo with more Spark questions) for the full experience.</p>
                     </div>
                     <div class="card" style="margin-bottom: 20px;">
                         <h3 style="margin-bottom: 15px;">What's the difference between modes?</h3>
-                        <p>Each mode is designed for different relationships: Couple (romantic), Friends (social fun), Family (all ages), Personal (custom decks), and Pandora (multiplayer).</p>
+                        <p>Each mode is designed for different relationships: Couple (romantic), Friends (social fun), Family (all ages), Personal (custom decks), Pandora (multiplayer), and Spark (AI-generated questions).</p>
                     </div>
                     <div class="card" style="margin-bottom: 20px;">
                         <h3 style="margin-bottom: 15px;">How does Pandora Mode work?</h3>
                         <p>The host creates a session and shares a PIN. Everyone joins, submits questions, and the host controls the game. Questions are deleted after the session for privacy.</p>
+                    </div>
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="margin-bottom: 15px;">What is Spark Mode?</h3>
+                        <p>Spark Mode uses AI to generate custom questions tailored to your preferences. Set Energy, Depth, and Spice levels, choose your occasion, and get unique questions instantly. Premium users get 150 questions/month, Premium+ users get 400/month. Questions expire after 24 hours but can be saved to favorites.</p>
                     </div>
                     <div class="card" style="margin-bottom: 20px;">
                         <h3 style="margin-bottom: 15px;">Can I try premium categories first?</h3>
