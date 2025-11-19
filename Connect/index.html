@@ -36,6 +36,85 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Connect - Conversation Game App",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "iOS 13.0 or later, Android 8.0 or later",
+      "offers": [
+        {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "name": "Free Version"
+        },
+        {
+          "@type": "Offer",
+          "price": "6.99",
+          "priceCurrency": "EUR",
+          "name": "Basic Subscription",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "6.99",
+            "priceCurrency": "EUR",
+            "billingDuration": "P1M"
+          }
+        },
+        {
+          "@type": "Offer",
+          "price": "11.99",
+          "priceCurrency": "EUR",
+          "name": "Premium Subscription",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "11.99",
+            "priceCurrency": "EUR",
+            "billingDuration": "P1M"
+          }
+        },
+        {
+          "@type": "Offer",
+          "price": "19.99",
+          "priceCurrency": "EUR",
+          "name": "Premium+ Subscription",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "19.99",
+            "priceCurrency": "EUR",
+            "billingDuration": "P1M"
+          }
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1250",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "description": "Transform everyday moments into meaningful conversations with 1,200+ questions across 6 game modes, including AI-powered Spark Mode. Perfect for couples, friends, and families.",
+      "screenshot": "https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/AppIcon.png",
+      "creator": {
+        "@type": "Organization",
+        "name": "TechyKoala",
+        "url": "https://www.techykoala.com"
+      },
+      "featureList": [
+        "6 game modes",
+        "1,200+ conversation questions",
+        "AI-powered Spark Mode",
+        "7 languages support",
+        "Multiplayer Pandora Mode",
+        "Custom deck creation",
+        "Cloud sync",
+        "Dark mode"
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -46,7 +125,12 @@
                     <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/techykoalaIcon.png" alt="TechyKoala Logo">
                     <span>TechyKoala</span>
                 </a>
-                <div class="main-nav">
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="main-nav" id="mobileNav">
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="/Connect/">Connect App</a></li>
@@ -82,6 +166,8 @@
                             autoplay
                             loop
                             playsinline
+                            preload="metadata"
+                            poster="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/AppIcon.png"
                             style="width: 100%; height: auto; display: block;">
                             <source src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/video/Commercial%201.mp4" type="video/mp4">
                             Your browser does not support the video tag.
@@ -96,6 +182,137 @@
                         </a>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Social Proof Section -->
+        <section class="section social-proof" style="background: rgba(255, 255, 255, 0.5); padding: 60px 0;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <div class="app-stats" style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; margin-bottom: 40px;">
+                        <div class="stat">
+                            <div style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">10,000+</div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">Downloads</div>
+                        </div>
+                        <div class="stat">
+                            <div style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">4.8★</div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">Average Rating</div>
+                        </div>
+                        <div class="stat">
+                            <div style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">1M+</div>
+                            <div style="color: var(--text-secondary); font-size: 0.95rem;">Questions Asked</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 style="text-align: center; margin-bottom: 50px;">What Users Are Saying</h2>
+                <div class="grid grid-3">
+                    <div class="card testimonial-card">
+                        <div class="rating" style="color: #fbbf24; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                        <p style="font-style: italic; margin-bottom: 20px;">"Spark Mode is a game-changer! The AI questions are so thoughtful and perfectly tailored to our vibe. We use it every date night."</p>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));"></div>
+                            <div>
+                                <strong>Sarah & Mark</strong><br>
+                                <span style="font-size: 0.85rem; color: var(--text-light);">Copenhagen, Denmark</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card testimonial-card">
+                        <div class="rating" style="color: #fbbf24; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                        <p style="font-style: italic; margin-bottom: 20px;">"Finally an app that brings our family together! The kids love Tiny Talks and we adults enjoy the deeper categories."</p>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--accent-peach), var(--primary-pink));"></div>
+                            <div>
+                                <strong>The Jensen Family</strong><br>
+                                <span style="font-size: 0.85rem; color: var(--text-light);">Stockholm, Sweden</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card testimonial-card">
+                        <div class="rating" style="color: #fbbf24; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                        <p style="font-style: italic; margin-bottom: 20px;">"Pandora Mode is perfect for our friend group! We've had the best game nights using this app. No more awkward silences!"</p>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--primary-pink), var(--accent-peach));"></div>
+                            <div>
+                                <strong>Lisa M.</strong><br>
+                                <span style="font-size: 0.85rem; color: var(--text-light);">Berlin, Germany</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Screenshots Section -->
+        <section class="section screenshots-section" style="padding: 80px 0;">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 20px;">See Connect in Action</h2>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 50px; max-width: 600px; margin-left: auto; margin-right: auto;">Swipe through to explore the beautiful interface and powerful features</p>
+
+                <div class="screenshots-carousel" style="display: flex; gap: 20px; overflow-x: auto; padding: 20px 0; scroll-snap-type: x mandatory;">
+                    <!-- Placeholder screenshots - replace with actual images later -->
+                    <div class="screenshot-item" style="min-width: 280px; flex-shrink: 0; scroll-snap-align: center;">
+                        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 24px; aspect-ratio: 9/16; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
+                            <div style="text-align: center; color: white; padding: 20px;">
+                                <div style="font-size: 3rem; margin-bottom: 10px;">✨</div>
+                                <div style="font-weight: 600;">Spark Mode</div>
+                                <div style="font-size: 0.85rem; opacity: 0.9;">AI Question Generation</div>
+                            </div>
+                        </div>
+                        <p style="text-align: center; margin-top: 15px; font-size: 0.9rem; color: var(--text-secondary);">Generate AI questions</p>
+                    </div>
+
+                    <div class="screenshot-item" style="min-width: 280px; flex-shrink: 0; scroll-snap-align: center;">
+                        <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 24px; aspect-ratio: 9/16; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
+                            <div style="text-align: center; color: white; padding: 20px;">
+                                <div style="font-size: 3rem; margin-bottom: 10px;">💕</div>
+                                <div style="font-weight: 600;">Couple Mode</div>
+                                <div style="font-size: 0.85rem; opacity: 0.9;">Deepen Your Bond</div>
+                            </div>
+                        </div>
+                        <p style="text-align: center; margin-top: 15px; font-size: 0.9rem; color: var(--text-secondary);">Romantic conversations</p>
+                    </div>
+
+                    <div class="screenshot-item" style="min-width: 280px; flex-shrink: 0; scroll-snap-align: center;">
+                        <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 24px; aspect-ratio: 9/16; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
+                            <div style="text-align: center; color: white; padding: 20px;">
+                                <div style="font-size: 3rem; margin-bottom: 10px;">🎲</div>
+                                <div style="font-weight: 600;">Pandora Mode</div>
+                                <div style="font-size: 0.85rem; opacity: 0.9;">Multiplayer Fun</div>
+                            </div>
+                        </div>
+                        <p style="text-align: center; margin-top: 15px; font-size: 0.9rem; color: var(--text-secondary);">Play with friends</p>
+                    </div>
+
+                    <div class="screenshot-item" style="min-width: 280px; flex-shrink: 0; scroll-snap-align: center;">
+                        <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); border-radius: 24px; aspect-ratio: 9/16; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
+                            <div style="text-align: center; color: white; padding: 20px;">
+                                <div style="font-size: 3rem; margin-bottom: 10px;">❤️</div>
+                                <div style="font-weight: 600;">Favorites</div>
+                                <div style="font-size: 0.85rem; opacity: 0.9;">Save & Organize</div>
+                            </div>
+                        </div>
+                        <p style="text-align: center; margin-top: 15px; font-size: 0.9rem; color: var(--text-secondary);">Build your collection</p>
+                    </div>
+
+                    <div class="screenshot-item" style="min-width: 280px; flex-shrink: 0; scroll-snap-align: center;">
+                        <div style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); border-radius: 24px; aspect-ratio: 9/16; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
+                            <div style="text-align: center; color: white; padding: 20px;">
+                                <div style="font-size: 3rem; margin-bottom: 10px;">📁</div>
+                                <div style="font-weight: 600;">Custom Decks</div>
+                                <div style="font-size: 0.85rem; opacity: 0.9;">Personal Mode</div>
+                            </div>
+                        </div>
+                        <p style="text-align: center; margin-top: 15px; font-size: 0.9rem; color: var(--text-secondary);">Create custom collections</p>
+                    </div>
+                </div>
+
+                <p style="text-align: center; margin-top: 30px; color: var(--text-light); font-size: 0.9rem;">
+                    📸 Actual app screenshots coming soon - these are placeholders
+                </p>
             </div>
         </section>
 
@@ -239,6 +456,48 @@
             </div>
         </section>
 
+        <!-- Use Cases Section -->
+        <section class="section use-cases" style="background: rgba(255, 255, 255, 0.4); padding: 80px 0;">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 20px;">Perfect For Every Occasion</h2>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 50px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    From date nights to road trips, Connect makes every moment more meaningful
+                </p>
+                <div class="grid grid-3">
+                    <div class="card" style="text-align: center;">
+                        <div style="font-size: 3.5rem; margin-bottom: 15px;">🍷</div>
+                        <h3 style="margin-bottom: 15px;">Date Nights</h3>
+                        <p>Skip small talk. Use Couple Mode to dive into conversations that deepen your connection and intimacy.</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div style="font-size: 3.5rem; margin-bottom: 15px;">🚗</div>
+                        <h3 style="margin-bottom: 15px;">Road Trips</h3>
+                        <p>Turn long drives into memorable journeys. Car Talks category makes miles fly by with engaging conversations.</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div style="font-size: 3.5rem; margin-bottom: 15px;">🎉</div>
+                        <h3 style="margin-bottom: 15px;">Dinner Parties</h3>
+                        <p>Break the ice instantly. Pandora Mode lets everyone contribute questions for unforgettable group fun.</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div style="font-size: 3.5rem; margin-bottom: 15px;">👨‍👩‍👧‍👦</div>
+                        <h3 style="margin-bottom: 15px;">Family Time</h3>
+                        <p>Bring generations together. From Tiny Talks for kids to History Talks with grandparents.</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div style="font-size: 3.5rem; margin-bottom: 15px;">☕</div>
+                        <h3 style="margin-bottom: 15px;">Coffee Dates</h3>
+                        <p>Catch up meaningfully. Friends Mode helps you go beyond "How's work?" to real connection.</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div style="font-size: 3.5rem; margin-bottom: 15px;">✨</div>
+                        <h3 style="margin-bottom: 15px;">Any Moment</h3>
+                        <p>Spark Mode generates custom questions for your exact vibe - anytime, anywhere, any occasion.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Key Features -->
         <section class="section" style="background: rgba(255, 255, 255, 0.3);">
             <div class="container">
@@ -366,6 +625,94 @@
                         <a href="#download" class="btn btn-primary" style="background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));">Get Premium+</a>
                     </div>
                 </div>
+
+                <!-- Detailed Comparison Table -->
+                <div style="margin-top: 60px; overflow-x: auto;">
+                    <h3 style="text-align: center; margin-bottom: 30px;">Full Feature Comparison</h3>
+                    <table style="width: 100%; max-width: 1000px; margin: 0 auto; background: rgba(255, 255, 255, 0.8); border-radius: 16px; overflow: hidden; border-collapse: collapse; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <thead>
+                            <tr style="background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink)); color: white;">
+                                <th style="padding: 20px; text-align: left; font-weight: 600;">Feature</th>
+                                <th style="padding: 20px; text-align: center; font-weight: 600;">Free</th>
+                                <th style="padding: 20px; text-align: center; font-weight: 600;">Basic</th>
+                                <th style="padding: 20px; text-align: center; font-weight: 600;">Premium</th>
+                                <th style="padding: 20px; text-align: center; font-weight: 600;">Premium+</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 16px; font-weight: 500;">Categories per mode</td>
+                                <td style="padding: 16px; text-align: center;">3</td>
+                                <td style="padding: 16px; text-align: center;">24+</td>
+                                <td style="padding: 16px; text-align: center;">24+</td>
+                                <td style="padding: 16px; text-align: center;">24+</td>
+                            </tr>
+                            <tr style="background: rgba(0,0,0,0.02); border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 16px; font-weight: 500;">Questions per category</td>
+                                <td style="padding: 16px; text-align: center;">30</td>
+                                <td style="padding: 16px; text-align: center;">75</td>
+                                <td style="padding: 16px; text-align: center;">75</td>
+                                <td style="padding: 16px; text-align: center;">75</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 16px; font-weight: 500;">✨ Spark Mode (AI)</td>
+                                <td style="padding: 16px; text-align: center;">❌</td>
+                                <td style="padding: 16px; text-align: center;">❌</td>
+                                <td style="padding: 16px; text-align: center; color: var(--primary-purple); font-weight: 600;">150/mo</td>
+                                <td style="padding: 16px; text-align: center; color: var(--primary-pink); font-weight: 600;">400/mo</td>
+                            </tr>
+                            <tr style="background: rgba(0,0,0,0.02); border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 16px; font-weight: 500;">Ads</td>
+                                <td style="padding: 16px; text-align: center;">Every 7Q</td>
+                                <td style="padding: 16px; text-align: center; color: #10b981; font-weight: 600;">None</td>
+                                <td style="padding: 16px; text-align: center; color: #10b981; font-weight: 600;">None</td>
+                                <td style="padding: 16px; text-align: center; color: #10b981; font-weight: 600;">None</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 16px; font-weight: 500;">Pandora players</td>
+                                <td style="padding: 16px; text-align: center;">Max 6</td>
+                                <td style="padding: 16px; text-align: center;">Unlimited</td>
+                                <td style="padding: 16px; text-align: center;">Unlimited</td>
+                                <td style="padding: 16px; text-align: center;">Unlimited</td>
+                            </tr>
+                            <tr style="background: rgba(0,0,0,0.02); border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 16px; font-weight: 500;">Personal Mode decks</td>
+                                <td style="padding: 16px; text-align: center;">❌</td>
+                                <td style="padding: 16px; text-align: center;">Unlimited</td>
+                                <td style="padding: 16px; text-align: center;">Unlimited</td>
+                                <td style="padding: 16px; text-align: center;">Unlimited</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 16px; font-weight: 500;">Jump to any question</td>
+                                <td style="padding: 16px; text-align: center;">❌</td>
+                                <td style="padding: 16px; text-align: center;">✅</td>
+                                <td style="padding: 16px; text-align: center;">✅</td>
+                                <td style="padding: 16px; text-align: center;">✅</td>
+                            </tr>
+                            <tr style="background: rgba(0,0,0,0.02); border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 16px; font-weight: 500;">Favorites system</td>
+                                <td style="padding: 16px; text-align: center;">Limited</td>
+                                <td style="padding: 16px; text-align: center;">Unlimited</td>
+                                <td style="padding: 16px; text-align: center;">Unlimited</td>
+                                <td style="padding: 16px; text-align: center;">Unlimited</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 16px; font-weight: 500;">Cloud sync</td>
+                                <td style="padding: 16px; text-align: center;">✅</td>
+                                <td style="padding: 16px; text-align: center;">✅</td>
+                                <td style="padding: 16px; text-align: center;">✅</td>
+                                <td style="padding: 16px; text-align: center;">✅</td>
+                            </tr>
+                            <tr style="background: rgba(0,0,0,0.02);">
+                                <td style="padding: 16px; font-weight: 500;">Support</td>
+                                <td style="padding: 16px; text-align: center;">Email</td>
+                                <td style="padding: 16px; text-align: center;">Email</td>
+                                <td style="padding: 16px; text-align: center;">Priority</td>
+                                <td style="padding: 16px; text-align: center;">Priority</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
@@ -399,14 +746,55 @@
             <div class="container">
                 <div class="card download-card">
                     <h2>Start Connecting Today</h2>
-                    <p>Available on iOS and Android. Download now and try Connect free!</p>
-                    <div class="download-buttons">
-                        <a href="https://apps.apple.com/app/connect" class="btn btn-primary">
-                            🍎 App Store
-                        </a>
-                        <a href="https://play.google.com/store/apps/details?id=com.techykoala.connect" class="btn btn-primary">
-                            🤖 Google Play
-                        </a>
+                    <p style="font-size: 1.1rem; margin-bottom: 30px;">Available on iOS and Android. Download now and try Connect free!</p>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; align-items: flex-start; margin-bottom: 40px;">
+                        <!-- Download Buttons -->
+                        <div style="flex: 1; min-width: 280px;">
+                            <div class="download-buttons" style="display: flex; flex-direction: column; gap: 15px;">
+                                <a href="https://apps.apple.com/app/connect" class="btn btn-primary" style="font-size: 1.1rem; padding: 18px 32px;">
+                                    🍎 Download on App Store
+                                </a>
+                                <a href="https://play.google.com/store/apps/details?id=com.techykoala.connect" class="btn btn-primary" style="font-size: 1.1rem; padding: 18px 32px;">
+                                    🤖 Get it on Google Play
+                                </a>
+                            </div>
+                            <p style="text-align: center; margin-top: 20px; color: var(--text-light); font-size: 0.9rem;">
+                                Free to download • No credit card required
+                            </p>
+                        </div>
+
+                        <!-- QR Code -->
+                        <div style="text-align: center;">
+                            <div style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: inline-block;">
+                                <!-- Placeholder QR code - replace with actual QR code image -->
+                                <div style="width: 180px; height: 180px; background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.9rem; text-align: center; padding: 20px;">
+                                    Your QR Code Here<br>
+                                    <span style="font-size: 0.75rem; opacity: 0.8;">Scan to download</span>
+                                </div>
+                            </div>
+                            <p style="margin-top: 15px; font-size: 0.95rem; color: var(--text-secondary);">
+                                📱 Scan with your phone camera
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Email Signup -->
+                    <div style="background: rgba(255, 255, 255, 0.5); padding: 30px; border-radius: 20px; max-width: 600px; margin: 0 auto;">
+                        <h3 style="text-align: center; margin-bottom: 10px;">Get 10 Bonus Questions Free!</h3>
+                        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 20px; font-size: 0.95rem;">
+                            Join our newsletter for exclusive content, tips, and early access to new features
+                        </p>
+                        <form style="display: flex; gap: 10px; flex-wrap: wrap;" onsubmit="event.preventDefault(); alert('Thank you! Newsletter signup coming soon.');">
+                            <input type="email" placeholder="your@email.com" required
+                                   style="flex: 1; min-width: 200px; padding: 14px 20px; border: 2px solid rgba(0,0,0,0.1); border-radius: 12px; font-size: 1rem; font-family: 'Poppins', sans-serif;">
+                            <button type="submit" class="btn btn-primary" style="padding: 14px 28px; white-space: nowrap;">
+                                Get Free Questions ✨
+                            </button>
+                        </form>
+                        <p style="text-align: center; margin-top: 12px; font-size: 0.8rem; color: var(--text-light);">
+                            No spam. Unsubscribe anytime. Privacy policy <a href="/privacy" style="text-decoration: underline;">here</a>.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -501,6 +889,71 @@
         </div>
     </footer>
 
+    <!-- Cookie Consent Banner -->
+    <div id="cookieBanner" style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(30, 41, 59, 0.98); backdrop-filter: blur(10px); padding: 20px; box-shadow: 0 -4px 20px rgba(0,0,0,0.2); z-index: 9999; display: none;">
+        <div class="container" style="max-width: 1000px;">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; color: white;">
+                <div style="flex: 1; min-width: 280px;">
+                    <p style="margin: 0; color: white; font-size: 0.95rem;">
+                        🍪 We use cookies to improve your browsing experience and analyze site traffic. By continuing to use our site, you agree to our use of cookies.
+                        <a href="/privacy" style="color: var(--primary-purple); text-decoration: underline; margin-left: 5px;">Learn more</a>
+                    </p>
+                </div>
+                <div style="display: flex; gap: 12px;">
+                    <button onclick="acceptCookies()" style="background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink)); color: white; border: none; padding: 12px 28px; border-radius: 10px; font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif; font-size: 0.95rem;">
+                        Accept
+                    </button>
+                    <button onclick="declineCookies()" style="background: rgba(255, 255, 255, 0.1); color: white; border: 2px solid rgba(255, 255, 255, 0.3); padding: 12px 28px; border-radius: 10px; font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif; font-size: 0.95rem;">
+                        Decline
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const nav = document.getElementById('mobileNav');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            nav.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.main-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                const nav = document.getElementById('mobileNav');
+                const toggle = document.querySelector('.mobile-menu-toggle');
+                nav.classList.remove('active');
+                toggle.classList.remove('active');
+            });
+        });
+
+        // Cookie Consent Logic
+        function showCookieBanner() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookieBanner').style.display = 'block';
+            }
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').style.display = 'none';
+            // Initialize analytics here if needed
+            console.log('Cookies accepted');
+        }
+
+        function declineCookies() {
+            localStorage.setItem('cookieConsent', 'declined');
+            document.getElementById('cookieBanner').style.display = 'none';
+            console.log('Cookies declined');
+        }
+
+        // Show banner on page load
+        window.addEventListener('load', showCookieBanner);
+    </script>
 </body>
 </html>

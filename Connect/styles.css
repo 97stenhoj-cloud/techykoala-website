@@ -599,3 +599,196 @@ a {
         padding: 25px 15px;
     }
 }
+
+/* ============================================
+   Mobile Navigation Hamburger Menu
+   ============================================ */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: var(--text-dark);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        padding: 30px 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+    }
+
+    .main-nav.active {
+        transform: translateY(0);
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .main-nav a {
+        font-size: 1.1rem;
+        display: block;
+        padding: 10px 0;
+    }
+}
+
+/* ============================================
+   Screenshots Carousel Improvements
+   ============================================ */
+.screenshots-carousel {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-purple) rgba(0,0,0,0.1);
+}
+
+.screenshots-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.screenshots-carousel::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.05);
+    border-radius: 10px;
+}
+
+.screenshots-carousel::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+    border-radius: 10px;
+}
+
+.screenshots-carousel::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-purple);
+}
+
+.screenshot-item {
+    transition: transform 0.3s ease;
+}
+
+.screenshot-item:hover {
+    transform: translateY(-5px);
+}
+
+/* ============================================
+   Testimonial Cards
+   ============================================ */
+.testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+/* ============================================
+   Table Responsive
+   ============================================ */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.85rem;
+    }
+
+    table th,
+    table td {
+        padding: 12px 8px !important;
+    }
+
+    table th:first-child,
+    table td:first-child {
+        position: sticky;
+        left: 0;
+        background: white;
+        z-index: 1;
+    }
+}
+
+/* ============================================
+   Email Form Improvements
+   ============================================ */
+input[type="email"]:focus {
+    outline: none;
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 0 3px rgba(192, 132, 252, 0.1);
+}
+
+/* ============================================
+   Smooth Scroll Behavior
+   ============================================ */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================
+   Loading States
+   ============================================ */
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* ============================================
+   Accessibility Improvements
+   ============================================ */
+.btn:focus,
+a:focus,
+button:focus,
+input:focus {
+    outline: 2px solid var(--primary-purple);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+@media print {
+    .site-header,
+    .site-footer,
+    #cookieBanner,
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+    }
+
+    .card {
+        break-inside: avoid;
+    }
+}
