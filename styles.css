@@ -560,23 +560,36 @@ a {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 600px) {
   .pricing-grid {
     grid-template-columns: 1fr !important;
-    gap: 24px !important;
-    max-width: 400px !important;
+    gap: 20px !important;
+    max-width: 350px !important;
     margin: 0 auto !important;
   }
 
   .pricing-card {
-    padding: 28px 24px !important;
+    padding: 24px 20px !important;
   }
 
   .pricing-card h3 {
-    font-size: 1.3rem !important;
+    font-size: 1.2rem !important;
   }
 
   .pricing-card ul {
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .pricing-card .btn {
+    padding: 10px 20px !important;
     font-size: 0.9rem !important;
   }
 }
