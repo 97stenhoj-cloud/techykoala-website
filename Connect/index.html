@@ -521,92 +521,71 @@
         </section>
 
         <!-- Pricing Section -->
-        <section id="pricing" class="section" style="padding: 80px 0;">
+        <section id="pricing" class="section" style="padding: 60px 0;">
             <div class="container">
-                <h2 style="text-align: center; margin-bottom: 60px;">Simple, Honest Pricing</h2>
+                <h2 style="text-align: center; margin-bottom: 40px;">Simple, Honest Pricing</h2>
 
-                <div class="grid grid-2" style="max-width: 1200px; margin: 0 auto; gap: 30px;">
+                <div class="pricing-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 1400px; margin: 0 auto;">
                     <!-- Free Tier -->
-                    <div class="card pricing-card free">
-                        <h3>Free Forever</h3>
-                        <div class="price-display">
-                            <span class="price-number">0</span>
-                            <span class="price-currency">€</span>
-                        </div>
-                        <ul class="pricing-features">
+                    <div class="card pricing-card free" style="padding: 24px 20px; text-align: center;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 8px;">Free Forever</h3>
+                        <div style="font-size: 2.5rem; font-weight: 700; color: var(--text-dark); margin-bottom: 16px;">0<span style="font-size: 1rem; font-weight: 400;">€</span></div>
+                        <ul style="list-style: none; text-align: left; font-size: 0.85rem; margin-bottom: 20px; line-height: 1.8;">
                             <li>✓ 3 categories per mode</li>
-                            <li>✓ 30 questions per category</li>
-                            <li>✓ 5-question previews of premium</li>
-                            <li>✓ Pandora: Max 6 players</li>
-                            <li>✓ Pandora: Max 12 questions</li>
-                            <li>✗ No Spark Mode access</li>
-                            <li>• Ads every 7 questions</li>
-                            <li>• Basic navigation</li>
+                            <li>✓ 30 questions/category</li>
+                            <li>✓ Premium previews</li>
+                            <li>✓ Pandora: 6 players</li>
+                            <li style="opacity: 0.5;">✗ No Spark Mode</li>
+                            <li style="opacity: 0.5;">• Ads every 7 questions</li>
                         </ul>
-                        <a href="#download" class="btn btn-secondary">Try Free</a>
+                        <a href="#download" class="btn btn-secondary" style="padding: 12px 24px; font-size: 0.95rem; width: 100%;">Try Free</a>
                     </div>
 
                     <!-- Basic Tier -->
-                    <div class="card pricing-card">
-                        <h3>Basic</h3>
-                        <div class="price-display">
-                            <span class="price-number">6.99</span>
-                            <span class="price-currency">€</span>
-                            <span class="price-period">/month</span>
-                        </div>
-                        <ul class="pricing-features">
-                            <li>✓ <strong>24+ premium categories</strong> unlocked</li>
-                            <li>✓ <strong>75 questions</strong> per category</li>
+                    <div class="card pricing-card" style="padding: 24px 20px; text-align: center;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 8px;">Basic</h3>
+                        <div style="font-size: 2.5rem; font-weight: 700; color: var(--text-dark); margin-bottom: 16px;">6.99<span style="font-size: 1rem; font-weight: 400;">€/mo</span></div>
+                        <ul style="list-style: none; text-align: left; font-size: 0.85rem; margin-bottom: 20px; line-height: 1.8;">
+                            <li>✓ <strong>24+ categories</strong></li>
+                            <li>✓ <strong>75 questions</strong>/category</li>
                             <li>✓ <strong>No ads</strong> forever</li>
-                            <li>✓ Pandora: <strong>Unlimited</strong> players</li>
-                            <li>✓ Personal Mode: <strong>Unlimited</strong> decks</li>
-                            <li>✓ <strong>Jump to any question</strong></li>
-                            <li>✓ <strong>Favorites</strong> across all modes</li>
+                            <li>✓ Unlimited players & decks</li>
                             <li>✓ <strong>Offline mode</strong></li>
-                            <li>✗ No Spark Mode access</li>
+                            <li style="opacity: 0.5;">✗ No Spark Mode</li>
                         </ul>
-                        <a href="#download" class="btn btn-primary">Get Basic</a>
+                        <a href="#download" class="btn btn-primary" style="padding: 12px 24px; font-size: 0.95rem; width: 100%;">Get Basic</a>
                     </div>
 
                     <!-- Premium Tier -->
-                    <div class="card pricing-card premium" style="border: 2px solid var(--primary-purple);">
-                        <div class="premium-badge">⭐ MOST POPULAR</div>
-                        <h3>Premium</h3>
-                        <div class="price-display">
-                            <span class="price-number">12.99</span>
-                            <span class="price-currency">€</span>
-                            <span class="price-period">/month</span>
-                        </div>
-                        <ul class="pricing-features premium-features">
-                            <li>✓ <strong>Everything in Basic</strong></li>
-                            <li>✓ ✨ <strong>Spark Mode access</strong></li>
-                            <li>✓ <strong>150 AI questions/month</strong></li>
-                            <li>✓ Custom Energy, Depth & Spice</li>
-                            <li>✓ Save Spark questions to favorites</li>
-                            <li>✓ Add Spark questions to decks</li>
-                            <li>✓ Support ongoing <strong>development</strong></li>
+                    <div class="card pricing-card premium" style="padding: 24px 20px; text-align: center; border: 2px solid var(--primary-purple); position: relative;">
+                        <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink)); color: white; padding: 4px 12px; border-radius: 12px; font-size: 0.7rem; font-weight: 600;">⭐ POPULAR</div>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 8px; margin-top: 8px;">Premium</h3>
+                        <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary-purple); margin-bottom: 16px;">12.99<span style="font-size: 1rem; font-weight: 400;">€/mo</span></div>
+                        <ul style="list-style: none; text-align: left; font-size: 0.85rem; margin-bottom: 20px; line-height: 1.8;">
+                            <li>✓ Everything in Basic</li>
+                            <li>✓ ✨ <strong>Spark Mode</strong></li>
+                            <li>✓ <strong>150 AI questions</strong>/mo</li>
+                            <li>✓ Custom Energy & Spice</li>
+                            <li>✓ Save to favorites/decks</li>
+                            <li>✓ Support development</li>
                         </ul>
-                        <a href="#download" class="btn btn-primary">Get Premium</a>
+                        <a href="#download" class="btn btn-primary" style="padding: 12px 24px; font-size: 0.95rem; width: 100%;">Get Premium</a>
                     </div>
 
                     <!-- Premium+ Tier -->
-                    <div class="card pricing-card" style="border: 2px solid var(--primary-pink);">
-                        <div class="premium-badge" style="background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));">🚀 POWER USER</div>
-                        <h3>Premium+</h3>
-                        <div class="price-display">
-                            <span class="price-number">19.99</span>
-                            <span class="price-currency">€</span>
-                            <span class="price-period">/month</span>
-                        </div>
-                        <ul class="pricing-features premium-features">
-                            <li>✓ <strong>Everything in Premium</strong></li>
-                            <li>✓ ✨ <strong>400 AI questions/month</strong></li>
-                            <li>✓ <strong>2.6x more</strong> Spark questions</li>
-                            <li>✓ Perfect for frequent users</li>
-                            <li>✓ Maximum creative freedom</li>
+                    <div class="card pricing-card" style="padding: 24px 20px; text-align: center; border: 2px solid var(--primary-pink); position: relative;">
+                        <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink)); color: white; padding: 4px 12px; border-radius: 12px; font-size: 0.7rem; font-weight: 600;">🚀 POWER</div>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 8px; margin-top: 8px;">Premium+</h3>
+                        <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary-pink); margin-bottom: 16px;">19.99<span style="font-size: 1rem; font-weight: 400;">€/mo</span></div>
+                        <ul style="list-style: none; text-align: left; font-size: 0.85rem; margin-bottom: 20px; line-height: 1.8;">
+                            <li>✓ Everything in Premium</li>
+                            <li>✓ ✨ <strong>400 AI questions</strong>/mo</li>
+                            <li>✓ <strong>2.6x more</strong> Spark</li>
+                            <li>✓ Maximum creativity</li>
                             <li>✓ Priority support</li>
+                            <li>✓ Power user perks</li>
                         </ul>
-                        <a href="#download" class="btn btn-primary" style="background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));">Get Premium+</a>
+                        <a href="#download" class="btn btn-primary" style="padding: 12px 24px; font-size: 0.95rem; width: 100%; background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));">Get Premium+</a>
                     </div>
                 </div>
 

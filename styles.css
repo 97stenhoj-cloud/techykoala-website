@@ -552,3 +552,16 @@ a {
     font-size: 0.85rem;
   }
 }
+
+/* Pricing Grid Responsive */
+@media (max-width: 1200px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
