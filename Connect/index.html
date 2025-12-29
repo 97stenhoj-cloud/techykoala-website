@@ -297,142 +297,115 @@
         <!-- Game Modes Section -->
         <section id="features" class="section">
             <div class="container">
-                <h2 style="text-align: center; margin-bottom: 60px;">Six Ways to Connect</h2>
+                <h2 style="text-align: center; margin-bottom: 20px;">Six Ways to Connect</h2>
+                <p style="text-align: center; color: #78716c; margin-bottom: 40px;">Swipe to explore all game modes</p>
 
-                <div class="grid grid-2">
-                    <!-- Couple Mode -->
-                    <div class="card">
-                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/couple.png"
-                             alt="Couple Mode"
-                             style="width: 80px; height: 80px; margin-bottom: 20px; border-radius: 16px;">
-                        <h3 style="color: var(--primary-pink); margin-bottom: 15px;">💕 Couple Mode</h3>
-                        <p style="margin-bottom: 20px;">Romantic conversations to deepen emotional intimacy</p>
-                        <div style="font-size: 0.9rem; line-height: 1.8; color: var(--text-primary);">
-                            <strong>Categories include:</strong><br>
-                            • Love Talks - Romance & connection<br>
-                            • Deep Talks - Values & vulnerability<br>
-                            • Silly Talks - Light-hearted fun<br>
-                            • Car Talks - Road trip conversations<br>
-                            • Spicy Talks - Intimate questions 🔒<br>
-                            • Love Languages Remix 🔒<br>
-                            <span style="font-size: 0.85rem; opacity: 0.8;">🔒 Premium categories</span>
+                <!-- Carousel Container -->
+                <div class="modes-carousel-wrapper" style="position: relative;">
+                    <button class="carousel-btn carousel-prev" onclick="scrollModes(-1)" style="position: absolute; left: -20px; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid rgba(192, 132, 252, 0.3); border-radius: 50%; width: 44px; height: 44px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-size: 1.2rem;">←</button>
+
+                    <div class="modes-carousel" id="modesCarousel" style="display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 20px 10px; -ms-overflow-style: none; scrollbar-width: none;">
+                        <!-- Couple Mode -->
+                        <div class="card mode-card" style="min-width: 320px; max-width: 320px; flex-shrink: 0; scroll-snap-align: start;">
+                            <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/couple.png" alt="Couple Mode" style="width: 60px; height: 60px; margin-bottom: 16px; border-radius: 14px;">
+                            <h3 style="color: var(--primary-pink); margin-bottom: 10px; font-size: 1.1rem;">💕 Couple Mode</h3>
+                            <p style="margin-bottom: 16px; font-size: 0.9rem;">Romantic conversations to deepen emotional intimacy</p>
+                            <div style="font-size: 0.8rem; line-height: 1.7; opacity: 0.85;">
+                                <strong>Categories:</strong> Love Talks, Deep Talks, Silly Talks, Car Talks, Spicy Talks 🔒, Love Languages 🔒
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Friends Mode -->
-                    <div class="card">
-                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/friends.png"
-                             alt="Friends Mode"
-                             style="width: 80px; height: 80px; margin-bottom: 20px; border-radius: 16px;">
-                        <h3 style="color: var(--primary-purple); margin-bottom: 15px;">🎉 Friends Mode</h3>
-                        <p style="margin-bottom: 20px;">Entertaining conversations for social gatherings</p>
-                        <div style="font-size: 0.9rem; line-height: 1.8; color: var(--text-primary);">
-                            <strong>Categories include:</strong><br>
-                            • Cozy Talks - Warm connection<br>
-                            • Silly Talks - Quirky fun<br>
-                            • Car Talks - Travel & adventure<br>
-                            • Party Night Talks 🔒<br>
-                            • Unpopular Opinions XL 🔒<br>
-                            • Plot Twists & Dilemmas 🔒<br>
-                            <span style="font-size: 0.85rem; opacity: 0.8;">🔒 Premium categories</span>
+                        <!-- Friends Mode -->
+                        <div class="card mode-card" style="min-width: 320px; max-width: 320px; flex-shrink: 0; scroll-snap-align: start;">
+                            <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/friends.png" alt="Friends Mode" style="width: 60px; height: 60px; margin-bottom: 16px; border-radius: 14px;">
+                            <h3 style="color: var(--primary-purple); margin-bottom: 10px; font-size: 1.1rem;">🎉 Friends Mode</h3>
+                            <p style="margin-bottom: 16px; font-size: 0.9rem;">Entertaining conversations for social gatherings</p>
+                            <div style="font-size: 0.8rem; line-height: 1.7; opacity: 0.85;">
+                                <strong>Categories:</strong> Cozy Talks, Silly Talks, Car Talks, Party Night 🔒, Unpopular Opinions 🔒, Plot Twists 🔒
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Family Mode -->
-                    <div class="card">
-                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/family.png"
-                             alt="Family Mode"
-                             style="width: 80px; height: 80px; margin-bottom: 20px; border-radius: 16px;">
-                        <h3 style="color: var(--accent-peach); margin-bottom: 15px;">👨‍👩‍👧‍👦 Family Mode</h3>
-                        <p style="margin-bottom: 20px;">Wholesome conversations perfect for all ages</p>
-                        <div style="font-size: 0.9rem; line-height: 1.8; color: var(--text-primary);">
-                            <strong>Categories include:</strong><br>
-                            • Silly Talks - Family fun<br>
-                            • Cozy Talks - Heartfelt moments<br>
-                            • History Talks - Family stories 🔒<br>
-                            • Tiny Talks - Ages 3-9 🔒<br>
-                            • The Good Old Days 🔒<br>
-                            • Would You Rather 🔒<br>
-                            <span style="font-size: 0.85rem; opacity: 0.8;">🔒 Premium categories</span>
+                        <!-- Family Mode -->
+                        <div class="card mode-card" style="min-width: 320px; max-width: 320px; flex-shrink: 0; scroll-snap-align: start;">
+                            <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/family.png" alt="Family Mode" style="width: 60px; height: 60px; margin-bottom: 16px; border-radius: 14px;">
+                            <h3 style="color: var(--accent-peach); margin-bottom: 10px; font-size: 1.1rem;">👨‍👩‍👧‍👦 Family Mode</h3>
+                            <p style="margin-bottom: 16px; font-size: 0.9rem;">Wholesome conversations perfect for all ages</p>
+                            <div style="font-size: 0.8rem; line-height: 1.7; opacity: 0.85;">
+                                <strong>Categories:</strong> Silly Talks, Cozy Talks, History Talks 🔒, Tiny Talks 🔒, Good Old Days 🔒, Would You Rather 🔒
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Personal Mode -->
-                    <div class="card">
-                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/personal.png"
-                             alt="Personal Mode"
-                             style="width: 80px; height: 80px; margin-bottom: 20px; border-radius: 16px;">
-                        <h3 style="color: var(--primary-pink); margin-bottom: 15px;">✏️ Personal Mode 🔒</h3>
-                        <p style="margin-bottom: 20px;">Create unlimited custom question decks (Premium)</p>
-                        <div style="font-size: 0.9rem; line-height: 1.8; color: var(--text-primary);">
-                            <strong>Features:</strong><br>
-                            • Build personalized collections<br>
-                            • Minimum 5 questions to play<br>
-                            • Shuffle and reorder<br>
-                            • Favorites from any mode ❤️<br>
+                        <!-- Personal Mode -->
+                        <div class="card mode-card" style="min-width: 320px; max-width: 320px; flex-shrink: 0; scroll-snap-align: start;">
+                            <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/personal.png" alt="Personal Mode" style="width: 60px; height: 60px; margin-bottom: 16px; border-radius: 14px;">
+                            <h3 style="color: var(--primary-pink); margin-bottom: 10px; font-size: 1.1rem;">✏️ Personal Mode 🔒</h3>
+                            <p style="margin-bottom: 16px; font-size: 0.9rem;">Create unlimited custom question decks</p>
+                            <div style="font-size: 0.8rem; line-height: 1.7; opacity: 0.85;">
+                                <strong>Features:</strong> Build collections, min 5 questions, shuffle & reorder, save favorites ❤️
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Pandora Mode -->
-                    <div class="card pandora-card">
-                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/pandora.png"
-                             alt="Pandora Mode"
-                             style="width: 80px; height: 80px; margin-bottom: 20px; border-radius: 16px;">
-                        <h3 style="color: var(--primary-purple); margin-bottom: 15px;">🎲 Pandora Mode - Multiplayer Magic</h3>
-                        <p style="margin-bottom: 20px; font-size: 1.1rem;">Real-time collaborative question game where everyone contributes!</p>
-                        <div class="pandora-grid">
-                            <div>
-                                <strong>1. Host Creates</strong><br>
-                                <span style="font-size: 0.9rem;">Start session & share PIN code</span>
+                        <!-- Pandora Mode -->
+                        <div class="card mode-card" style="min-width: 320px; max-width: 320px; flex-shrink: 0; scroll-snap-align: start;">
+                            <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/pandora.png" alt="Pandora Mode" style="width: 60px; height: 60px; margin-bottom: 16px; border-radius: 14px;">
+                            <h3 style="color: var(--primary-purple); margin-bottom: 10px; font-size: 1.1rem;">🎲 Pandora Mode</h3>
+                            <p style="margin-bottom: 16px; font-size: 0.9rem;">Real-time multiplayer question game</p>
+                            <div style="font-size: 0.8rem; line-height: 1.7; opacity: 0.85;">
+                                <strong>How it works:</strong> Host creates, players join via PIN, everyone submits questions, react with emojis!
                             </div>
-                            <div>
-                                <strong>2. Players Join</strong><br>
-                                <span style="font-size: 0.9rem;">Max 6 free, unlimited premium</span>
-                            </div>
-                            <div>
-                                <strong>3. Everyone Submits</strong><br>
-                                <span style="font-size: 0.9rem;">Min 5, max 12 free questions</span>
-                            </div>
-                            <div>
-                                <strong>4. Host Controls</strong><br>
-                                <span style="font-size: 0.9rem;">Set timers (1-15 min)</span>
-                            </div>
-                            <div>
-                                <strong>5. React Together</strong><br>
-                                <span style="font-size: 0.9rem;">Emoji reactions during play</span>
-                            </div>
-                            <div>
-                                <strong>6. Privacy First</strong><br>
-                                <span style="font-size: 0.9rem;">Questions deleted after session</span>
+                        </div>
+
+                        <!-- Spark Mode -->
+                        <div class="card mode-card" style="min-width: 320px; max-width: 320px; flex-shrink: 0; scroll-snap-align: start; border: 2px solid var(--primary-purple); position: relative;">
+                            <div style="position: absolute; top: 10px; right: 10px; background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink)); color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.65rem; font-weight: 600;">✨ NEW</div>
+                            <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/sparkai.png" alt="Spark Mode" style="width: 60px; height: 60px; margin-bottom: 16px; border-radius: 14px;">
+                            <h3 style="color: var(--primary-purple); margin-bottom: 10px; font-size: 1.1rem;">✨ Spark Mode 🔒</h3>
+                            <p style="margin-bottom: 16px; font-size: 0.9rem;">AI-powered custom questions</p>
+                            <div style="font-size: 0.8rem; line-height: 1.7; opacity: 0.85;">
+                                <strong>Features:</strong> Set Energy, Depth & Spice, AI generates unique questions. 150/mo Premium, 400/mo Premium+
                             </div>
                         </div>
                     </div>
 
-                    <!-- Spark Mode - NEW! -->
-                    <div class="card" style="border: 2px solid var(--primary-purple); position: relative;">
-                        <div style="position: absolute; top: 10px; right: 10px; background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink)); color: white; padding: 6px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">✨ NEW!</div>
-                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/category_icons/sparkai.png"
-                             alt="Spark Mode"
-                             style="width: 80px; height: 80px; margin-bottom: 20px; border-radius: 16px;">
-                        <h3 style="color: var(--primary-purple); margin-bottom: 15px;">✨ Spark Mode - AI-Powered Questions 🔒</h3>
-                        <p style="margin-bottom: 20px; font-size: 1.1rem;">Generate custom questions on-the-fly using AI tailored to your exact vibe!</p>
-                        <div style="font-size: 0.9rem; line-height: 1.8; color: var(--text-primary);">
-                            <strong>How it works:</strong><br>
-                            • Set Energy, Depth & Spice levels<br>
-                            • Choose group size & occasion<br>
-                            • AI generates unique questions instantly<br>
-                            • Questions expire after 24 hours<br>
-                            • Save favorites to your collection ❤️<br>
-                            <br>
-                            <strong>Monthly Limits:</strong><br>
-                            • Premium: 150 questions/month<br>
-                            • Premium+: 400 questions/month<br>
-                            <span style="font-size: 0.85rem; opacity: 0.8;">🔒 Premium or Premium+ required</span>
-                        </div>
-                    </div>
+                    <button class="carousel-btn carousel-next" onclick="scrollModes(1)" style="position: absolute; right: -20px; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid rgba(192, 132, 252, 0.3); border-radius: 50%; width: 44px; height: 44px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-size: 1.2rem;">→</button>
+                </div>
+
+                <!-- Carousel Dots -->
+                <div style="display: flex; justify-content: center; gap: 8px; margin-top: 20px;">
+                    <span class="carousel-dot active" onclick="scrollToMode(0)" style="width: 8px; height: 8px; border-radius: 50%; background: var(--primary-purple); cursor: pointer; transition: all 0.3s;"></span>
+                    <span class="carousel-dot" onclick="scrollToMode(1)" style="width: 8px; height: 8px; border-radius: 50%; background: rgba(192, 132, 252, 0.3); cursor: pointer; transition: all 0.3s;"></span>
+                    <span class="carousel-dot" onclick="scrollToMode(2)" style="width: 8px; height: 8px; border-radius: 50%; background: rgba(192, 132, 252, 0.3); cursor: pointer; transition: all 0.3s;"></span>
+                    <span class="carousel-dot" onclick="scrollToMode(3)" style="width: 8px; height: 8px; border-radius: 50%; background: rgba(192, 132, 252, 0.3); cursor: pointer; transition: all 0.3s;"></span>
+                    <span class="carousel-dot" onclick="scrollToMode(4)" style="width: 8px; height: 8px; border-radius: 50%; background: rgba(192, 132, 252, 0.3); cursor: pointer; transition: all 0.3s;"></span>
+                    <span class="carousel-dot" onclick="scrollToMode(5)" style="width: 8px; height: 8px; border-radius: 50%; background: rgba(192, 132, 252, 0.3); cursor: pointer; transition: all 0.3s;"></span>
                 </div>
             </div>
         </section>
+
+        <script>
+        function scrollModes(direction) {
+            const carousel = document.getElementById('modesCarousel');
+            const cardWidth = 344; // 320px card + 24px gap
+            carousel.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+        }
+
+        function scrollToMode(index) {
+            const carousel = document.getElementById('modesCarousel');
+            const cardWidth = 344;
+            carousel.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
+        }
+
+        // Update dots on scroll
+        document.getElementById('modesCarousel').addEventListener('scroll', function() {
+            const carousel = this;
+            const cardWidth = 344;
+            const currentIndex = Math.round(carousel.scrollLeft / cardWidth);
+            const dots = document.querySelectorAll('.carousel-dot');
+            dots.forEach((dot, i) => {
+                dot.style.background = i === currentIndex ? 'var(--primary-purple)' : 'rgba(192, 132, 252, 0.3)';
+            });
+        });
+        </script>
 
         <!-- Use Cases Section -->
         <section class="section use-cases" style="background: rgba(255, 255, 255, 0.4); padding: 80px 0;">

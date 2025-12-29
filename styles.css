@@ -565,3 +565,20 @@ a {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* Game Modes Carousel */
+.modes-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-btn:hover {
+  background: var(--primary-purple) !important;
+  color: white;
+  border-color: var(--primary-purple) !important;
+}
+
+@media (max-width: 768px) {
+  .carousel-btn {
+    display: none !important;
+  }
+}
