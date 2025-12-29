@@ -563,18 +563,20 @@
                 </div>
 
                 <!-- Detailed Comparison Table -->
-                <div style="margin-top: 60px; overflow-x: auto;">
+                <div style="margin-top: 60px;">
                     <h3 style="text-align: center; margin-bottom: 30px;">Full Feature Comparison</h3>
-                    <table style="width: 100%; max-width: 1000px; margin: 0 auto; background: rgba(255, 255, 255, 0.8); border-radius: 16px; overflow: hidden; border-collapse: collapse; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                        <thead>
-                            <tr style="background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink)); color: white;">
-                                <th style="padding: 20px; text-align: left; font-weight: 600;">Feature</th>
-                                <th style="padding: 20px; text-align: center; font-weight: 600;">Free</th>
-                                <th style="padding: 20px; text-align: center; font-weight: 600;">Basic</th>
-                                <th style="padding: 20px; text-align: center; font-weight: 600;">Premium</th>
-                                <th style="padding: 20px; text-align: center; font-weight: 600;">Premium+</th>
-                            </tr>
-                        </thead>
+                    <p style="text-align: center; color: var(--text-secondary); margin-bottom: 20px; font-size: 0.9rem; display: none;" class="scroll-hint">👆 Scroll horizontally to see all plans</p>
+                    <div class="comparison-table-wrapper">
+                        <table class="comparison-table" style="width: 100%; max-width: 1000px; margin: 0 auto; background: rgba(255, 255, 255, 0.8); border-radius: 16px; overflow: hidden; border-collapse: collapse; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                            <thead>
+                                <tr style="background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink)); color: white;">
+                                    <th style="padding: 20px; text-align: left; font-weight: 600;">Feature</th>
+                                    <th style="padding: 20px; text-align: center; font-weight: 600;">Free</th>
+                                    <th style="padding: 20px; text-align: center; font-weight: 600;">Basic</th>
+                                    <th style="padding: 20px; text-align: center; font-weight: 600;">Premium</th>
+                                    <th style="padding: 20px; text-align: center; font-weight: 600;">Premium+</th>
+                                </tr>
+                            </thead>
                         <tbody>
                             <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
                                 <td style="padding: 16px; font-weight: 500;">Categories per mode</td>
@@ -647,7 +649,8 @@
                                 <td style="padding: 16px; text-align: center;">Priority</td>
                             </tr>
                         </tbody>
-                    </table>
+                        </table>
+                    </div>
                 </div>
             </div>
         </section>
