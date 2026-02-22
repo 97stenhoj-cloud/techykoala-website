@@ -1,24 +1,23 @@
-export default async function handler(req, res) {
+import https from 'https';
+
+export default function handler(req, res) {
   const { url } = req.query;
 
   if (!url) {
     return res.status(400).json({ error: 'Missing url parameter' });
   }
 
-  try {
-    const response = await fetch(url);
-
-    if (!response.ok) {
-      return res.status(502).json({ error: `Upstream returned ${response.status}` });
+  https.get(url, (upstream) => {
+    if (upstream.statusCode !== 200) {
+      return res.status(502).json({ error: `Upstream returned ${upstream.statusCode}` });
     }
 
-    const contentType = response.headers.get('content-type') || 'image/png';
-    const buffer = Buffer.from(await response.arrayBuffer());
-
+    const contentType = upstream.headers['content-type'] || 'image/png';
     res.setHeader('Content-Type', contentType);
     res.setHeader('Cache-Control', 'public, max-age=600');
-    res.send(buffer);
-  } catch (err) {
+
+    upstream.pipe(res);
+  }).on('error', (err) => {
     res.status(500).json({ error: err.message });
-  }
+  });
 }
