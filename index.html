@@ -1,162 +1,818 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TechyKoala - Building connections that matter through cozy digital experiences.">
-    <title>TechyKoala - Building Connections That Matter</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/techykoalaIcon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechyKoala — Building What Matters</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #faf8f4;
+    --warm-white: #f5f2ec;
+    --soft-green: #e8f4f0;
+    --koala-green: #10a37f;
+    --koala-deep: #0d8a6a;
+    --koala-forest: #0b6b54;
+    --mint: #d2efe6;
+    --charcoal: #1a1f1c;
+    --text-dark: #1a2b1f;
+    --text-body: #3d4f42;
+    --text-muted: #7a8a7e;
+    --connect-pink: #ff6b9d;
+    --connect-pink-bg: #fff0f4;
+    --trading-blue: #3b8ff0;
+    --trading-blue-bg: #eef5ff;
+    --content-orange: #f59e42;
+    --content-orange-bg: #fff6ec;
+    --card-border: rgba(0,0,0,0.06);
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+    --shadow-md: 0 8px 30px rgba(0,0,0,0.06);
+    --shadow-lg: 0 16px 50px rgba(0,0,0,0.08);
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', -apple-system, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--text-dark);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* =================== NAV =================== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    background: rgba(26, 21, 18, 0.8);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: background 0.3s, border 0.3s;
+  }
+
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+  }
+  .nav-brand img {
+    width: 36px; height: 36px;
+    object-fit: contain;
+  }
+  .nav-brand-text {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: #c4a882;
+  }
+  .nav-brand-text span { color: #f5f0eb; }
+
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: color 0.2s;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  .nav-links a:hover { color: #b8976d; }
+
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+  .nav-hamburger span {
+    width: 22px; height: 2px;
+    background: #f5f0eb;
+    border-radius: 2px;
+  }
+
+  /* =================== HERO =================== */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(160deg, #1c1815 0%, #252019 35%, #1a1714 65%, #121010 100%);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(ellipse 700px 600px at 50% 55%, rgba(107, 82, 68, 0.14) 0%, transparent 70%),
+      radial-gradient(ellipse 400px 400px at 25% 30%, rgba(16, 163, 127, 0.06) 0%, transparent 70%),
+      radial-gradient(ellipse 400px 400px at 75% 70%, rgba(16, 163, 127, 0.04) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    pointer-events: none;
+  }
+
+  .hero-koala {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation: koalaReveal 1s ease-out 0.1s both, koalaFloat 4s ease-in-out 1.2s infinite;
+    filter: drop-shadow(0 24px 64px rgba(0,0,0,0.5));
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  @keyframes koalaReveal {
+    from { opacity: 0; transform: translateY(20px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  @keyframes koalaFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+
+  .hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Soft glow behind koala */
+  .hero-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(107, 82, 68, 0.18) 0%, rgba(16, 163, 127, 0.04) 40%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+    animation: glowPulse 6s ease-in-out infinite alternate;
+  }
+  @keyframes glowPulse {
+    0% { transform: translate(-50%, -60%) scale(1); opacity: 1; }
+    100% { transform: translate(-50%, -60%) scale(1.1); opacity: 0.7; }
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 1.1rem;
+    border: 1px solid rgba(16, 163, 127, 0.35);
+    border-radius: 100px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #10a37f;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 2rem;
+    background: rgba(16, 163, 127, 0.08);
+    animation: fadeUp 0.7s ease-out 0.2s both;
+  }
+  .hero-badge .dot {
+    width: 6px; height: 6px;
+    background: #c4a882;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.7); }
+  }
+
+  .hero h1 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(3.2rem, 8vw, 6rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: #f5f0eb;
+    margin-bottom: 2rem;
+    animation: fadeUp 0.7s ease-out 0.35s both;
+  }
+  .hero h1 .accent {
+    background: linear-gradient(135deg, #c4a882, #e8d5bf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    color: #9a918a;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+    line-height: 1.65;
+    margin-bottom: 2rem;
+    animation: fadeUp 0.7s ease-out 0.5s both;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    animation: fadeUp 0.7s ease-out 0.65s both;
+  }
+
+  .btn {
+    padding: 0.85rem 2rem;
+    border-radius: 14px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-primary {
+    background: #c4a882;
+    color: #1a1512;
+    box-shadow: 0 4px 16px rgba(196, 168, 130, 0.25);
+  }
+  .btn-primary:hover {
+    background: #d4b892;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(196, 168, 130, 0.35);
+  }
+  .btn-outline {
+    background: transparent;
+    color: #f5f0eb;
+    border: 1.5px solid rgba(255,255,255,0.2);
+    box-shadow: none;
+  }
+  .btn-outline:hover {
+    border-color: #10a37f;
+    color: #10a37f;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255,255,255,0.35);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    animation: fadeUp 0.7s ease-out 1s both;
+  }
+  .scroll-line {
+    width: 1px; height: 36px;
+    background: linear-gradient(to bottom, #c4a882, transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollPulse {
+    0%, 100% { height: 36px; opacity: 0.7; }
+    50% { height: 22px; opacity: 0.3; }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* =================== SECTIONS =================== */
+  section { padding: 6.5rem 2rem; position: relative; z-index: 1; }
+
+  .section-label {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #c4a882;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    color: var(--text-dark);
+    margin-bottom: 1.25rem;
+  }
+
+  /* =================== VISION =================== */
+  .vision-section {
+    background: var(--warm-white);
+    border-top: 1px solid var(--card-border);
+    border-bottom: 1px solid var(--card-border);
+  }
+
+  .vision {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .vision-text .big-quote {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+    color: var(--text-dark);
+  }
+  .vision-text .big-quote .hl { color: #c4a882; }
+  .vision-text p {
+    color: var(--text-body);
+    font-size: 1.02rem;
+    line-height: 1.7;
+    margin-bottom: 0.85rem;
+  }
+
+  .vision-values { display: grid; gap: 1rem; }
+
+  .value-card {
+    padding: 1.35rem 1.6rem;
+    background: #fff;
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .value-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: #c4a882;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .value-card:hover::before { opacity: 1; }
+  .value-card:hover { transform: translateX(4px); box-shadow: var(--shadow-md); }
+  .value-card h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+    color: var(--text-dark);
+  }
+  .value-card p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.5; }
+
+  /* =================== PROJECTS =================== */
+  .projects-inner { max-width: 1100px; margin: 0 auto; }
+  .projects-header { text-align: center; margin-bottom: 3rem; }
+  .projects-header .section-title span {
+    background: linear-gradient(135deg, var(--connect-pink), var(--trading-blue), var(--content-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    padding: 2.25rem 2rem;
+    border-radius: 20px;
+    border: 1px solid var(--card-border);
+    background: #fff;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+  }
+  .project-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    border-radius: 20px 20px 0 0;
+    transition: height 0.35s;
+  }
+  .project-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+
+  .card-connect { background: linear-gradient(180deg, var(--connect-pink-bg) 0%, #fff 40%); }
+  .card-connect::before { background: linear-gradient(90deg, var(--connect-pink), #ff8ec4); }
+
+  .card-trading { background: linear-gradient(180deg, var(--trading-blue-bg) 0%, #fff 40%); }
+  .card-trading::before { background: linear-gradient(90deg, var(--trading-blue), #6babf7); }
+
+  .card-content { background: linear-gradient(180deg, var(--content-orange-bg) 0%, #fff 40%); }
+  .card-content::before { background: linear-gradient(90deg, var(--content-orange), #ffbd70); }
+
+  .project-icon {
+    width: 50px; height: 50px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+  }
+  .card-connect .project-icon { background: rgba(255, 107, 157, 0.15); }
+  .card-trading .project-icon { background: rgba(59, 143, 240, 0.15); }
+  .card-content .project-icon { background: rgba(245, 158, 66, 0.15); }
+
+  .project-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.85rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 100px;
+    width: fit-content;
+  }
+  .status-live { background: var(--soft-green); color: #c4a882; }
+  .status-soon { background: var(--content-orange-bg); color: #c07520; }
+  .status-dot { width: 5px; height: 5px; border-radius: 50%; }
+  .status-live .status-dot { background: #c4a882; }
+  .status-soon .status-dot { background: var(--content-orange); }
+
+  .project-card h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+  }
+  .project-card p { color: var(--text-body); font-size: 0.92rem; line-height: 1.6; flex-grow: 1; }
+
+  .project-link {
+    margin-top: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .project-link:hover { gap: 0.8rem; }
+  .card-connect .project-link { color: var(--connect-pink); }
+  .card-trading .project-link { color: var(--trading-blue); }
+  .card-content .project-link { color: var(--content-orange); }
+
+  /* =================== TEAM =================== */
+  .team-section-wrap {
+    background: var(--warm-white);
+    border-top: 1px solid var(--card-border);
+    border-bottom: 1px solid var(--card-border);
+  }
+  .team-inner { max-width: 1100px; margin: 0 auto; }
+  .team-header { text-align: center; margin-bottom: 3rem; }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .team-card {
+    background: #fff;
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+  }
+  .team-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+  .team-photo {
+    width: 110px; height: 110px;
+    border-radius: 50%;
+    margin: 0 auto 1.25rem;
+    object-fit: cover;
+    object-position: center top;
+    border: 3px solid rgba(196, 168, 130, 0.25);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .team-card:hover .team-photo {
+    transform: scale(1.05);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  }
+
+  .team-card h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+  }
+  .team-role {
+    color: #c4a882;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+  }
+  .team-card .bio { color: var(--text-body); font-size: 0.92rem; line-height: 1.6; }
+
+  /* =================== FOOTER =================== */
+  footer {
+    padding: 3rem 2rem;
+    border-top: 1px solid var(--card-border);
+    text-align: center;
+    background: var(--cream);
+  }
+  .footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+  }
+  .footer-brand img { width: 28px; height: 28px; object-fit: contain; }
+  .footer-brand-text {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: #6b5244;
+  }
+  .footer-brand-text span { color: #6b5244; }
+  footer p { color: var(--text-muted); font-size: 0.82rem; }
+
+  /* =================== DOT PATTERN =================== */
+  .dot-pattern {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.35;
+    background-image: radial-gradient(circle, rgba(0,0,0,0.04) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  section, nav, footer { position: relative; z-index: 1; }
+
+  /* =================== MOBILE =================== */
+  @media (max-width: 900px) {
+    .vision { grid-template-columns: 1fr; gap: 2.5rem; }
+    .projects-grid { grid-template-columns: 1fr; max-width: 440px; margin-left: auto; margin-right: auto; }
+    .team-grid { grid-template-columns: 1fr; max-width: 380px; }
+  }
+
+  @media (max-width: 640px) {
+    .hero-koala { width: 240px; }
+    nav { padding: 0.85rem 1.25rem; }
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+    .nav-links.open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      background: rgba(26, 21, 18, 0.97);
+      backdrop-filter: blur(20px);
+      padding: 1.25rem 1.5rem;
+      gap: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    section { padding: 4rem 1.25rem; }
+    .hero { padding: 6.5rem 1.25rem 3rem; min-height: auto; padding-bottom: 4rem; }
+    .hero-koala { width: 150px; }
+    .hero-cta { flex-direction: column; align-items: center; width: 100%; }
+    .hero-cta .btn { width: 100%; text-align: center; }
+    .hero-scroll { display: none; }
+    .project-card { padding: 1.75rem 1.5rem; }
+    .team-card { padding: 2rem 1.5rem; }
+  }
+</style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="site-header">
-        <div class="container">
-            <div class="header-container">
-                <a href="/" class="logo">
-                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/techykoalaIcon.png" alt="TechyKoala">
-                    <span>TechyKoala</span>
-                </a>
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="#story">Story</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="/Connect/">Connect App</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
 
-    <!-- Animated Background -->
-    <div class="animated-bg">
-        <div class="tech-grid"></div>
-        <div class="floating-particles"></div>
+<div class="dot-pattern"></div>
+
+<nav>
+  <a href="#" class="nav-brand">
+    <img src="/images/koala-logo.png" alt="TechyKoala">
+    <div class="nav-brand-text"><span>Techy</span>Koala</div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#vision">Vision</a></li>
+    <li><a href="#projects">Products</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section class="hero">
+  <div class="hero-glow"></div>
+  <img class="hero-koala" src="/images/koala-logo-full.png" alt="TechyKoala mascot">
+  <div class="hero-content">
+    <h1>We Build Tools<br>That <span class="accent">Matter.</span></h1>
+    <p class="hero-sub">A product studio creating software that brings people closer, makes smarter decisions, and empowers creators.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">See Our Products</a>
+      <a href="#vision" class="btn btn-outline">Our Story</a>
     </div>
+  </div>
+  <div class="hero-scroll">
+    Scroll
+    <div class="scroll-line"></div>
+  </div>
+</section>
 
-    <main class="site-main">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/techykoalaIcon.png" alt="TechyKoala" class="hero-logo">
-                    <h1>Building Connections<br>That Matter</h1>
-                    <p>We create cozy digital experiences that bring people together. Technology should feel warm, friendly, and deeply human.</p>
-                    <div class="hero-buttons">
-                        <a href="/Connect/" class="btn btn-primary">Explore Connect App ✨</a>
-                        <a href="#story" class="btn btn-secondary">Our Story</a>
-                    </div>
-                    <div class="hero-trust">
-                        <p>Trusted by thousands of users worldwide 🌍</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section class="vision-section" id="vision">
+  <div class="vision">
+    <div class="vision-text">
+      <div class="section-label">Our Vision</div>
+      <div class="big-quote">
+        Technology should <span class="hl">amplify humanity</span>, not replace it.
+      </div>
+      <p>We started TechyKoala with a simple belief: the best software doesn't just solve problems — it makes life richer. Every product we build starts with a human need and ends with something people genuinely love to use.</p>
+      <p>From strengthening relationships to empowering content creators and enabling smarter financial decisions, we're building a family of tools that put people first.</p>
+    </div>
+    <div class="vision-values">
+      <div class="value-card">
+        <h3>People Over Metrics</h3>
+        <p>We optimize for meaningful impact in people's lives, not vanity numbers.</p>
+      </div>
+      <div class="value-card">
+        <h3>Ship Fast, Stay Honest</h3>
+        <p>We move quickly but never cut corners on quality or user trust.</p>
+      </div>
+      <div class="value-card">
+        <h3>Small Team, Big Heart</h3>
+        <p>Every product is handcrafted by people who deeply care about the outcome.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- Story Section -->
-        <section id="story" class="section">
-            <div class="container">
-                <h2>Our Story</h2>
-                <div class="grid grid-2">
-                    <div class="card">
-                        <h3>🐨 Who We Are</h3>
-                        <p>TechyKoala was born from a simple idea: technology should bring people closer, not push them apart. We're a team passionate about creating apps that facilitate real conversations and genuine connections.</p>
-                    </div>
-                    <div class="card">
-                        <h3>💡 Our Mission</h3>
-                        <p>To design digital experiences that feel warm, friendly, and deeply human. Every feature we build serves one purpose: helping people connect meaningfully.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section id="projects">
+  <div class="projects-inner">
+    <div class="projects-header">
+      <div class="section-label">What We're Building</div>
+      <div class="section-title">Three products.<br><span>One mission.</span></div>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card card-connect">
+        <div class="project-icon">💬</div>
+        <div class="project-status status-live">
+          <span class="status-dot"></span> Live
+        </div>
+        <h3>Connect</h3>
+        <p>A card-based question game designed to spark meaningful conversations between couples, friends, and families. Deeper bonds start with better questions.</p>
+        <a href="/connect" class="project-link">Explore Connect →</a>
+      </div>
+      <div class="project-card card-trading">
+        <div class="project-icon">📊</div>
+        <div class="project-status status-soon">
+          <span class="status-dot"></span> Coming Soon
+        </div>
+        <h3>Trading</h3>
+        <p>Intelligent tools for smarter financial decisions. Helping everyday people navigate markets with confidence and clarity.</p>
+        <a href="#" class="project-link">Stay Tuned →</a>
+      </div>
+      <div class="project-card card-content">
+        <div class="project-icon">✨</div>
+        <div class="project-status status-soon">
+          <span class="status-dot"></span> Coming Soon
+        </div>
+        <h3>Content Studio</h3>
+        <p>AI-powered content creation that feels human. Helping creators produce authentic, engaging content without the burnout.</p>
+        <a href="#" class="project-link">Stay Tuned →</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- Products Section -->
-        <section id="products" class="section">
-            <div class="container">
-                <h2>Our Products</h2>
-                
-                <!-- Connect App -->
-                <div class="featured-product card">
-                    <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/AppIcon.png" alt="Connect App" class="product-icon">
-                    <h3>Connect</h3>
-                    <p class="tagline">Transform everyday moments into meaningful conversations</p>
-                    <p>Card-based question games designed for couples, friends, and families. With 6 game modes (including AI-powered Spark Mode!) and over 1,200 questions in 7 languages, Connect makes every conversation count.</p>
-                    <div class="product-stats">
-                        <div class="stat-item">
-                            <strong>1,200+</strong>
-                            <span>Questions</span>
-                        </div>
-                        <div class="stat-item">
-                            <strong>6</strong>
-                            <span>Game Modes</span>
-                        </div>
-                        <div class="stat-item">
-                            <strong>7</strong>
-                            <span>Languages</span>
-                        </div>
-                    </div>
-                    <a href="/Connect/" class="btn btn-primary">Learn More</a>
-                </div>
+<section class="team-section-wrap" id="team">
+  <div class="team-inner">
+    <div class="team-header">
+      <div class="section-label">The People</div>
+      <div class="section-title">Built with heart.<br>By us.</div>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <img class="team-photo" src="/images/markus.png" alt="Markus">
+        <h3>Markus</h3>
+        <div class="team-role">Co-Founder & Developer</div>
+        <p class="bio">The builder behind TechyKoala. Passionate about turning ideas into products that people actually want to use. Loves shipping fast and iterating constantly.</p>
+      </div>
+      <div class="team-card">
+        <img class="team-photo" src="/images/otilia.png" alt="Otilia" style="object-position: center 50%;">
+        <h3>Otilia</h3>
+        <div class="team-role">Co-Founder & Creative Lead</div>
+        <p class="bio">The heart and creative force of TechyKoala. Brings warmth, empathy, and an eye for design to everything we create. Connect was literally built for her.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-                <!-- Coming Soon -->
-                <div class="card" style="text-align: center; margin-top: 40px;">
-                    <h3>More Apps Coming Soon</h3>
-                    <p>We're working on exciting new projects to help people connect in meaningful ways. Stay tuned! 🚀</p>
-                </div>
-            </div>
-        </section>
+<footer id="contact">
+  <div class="footer-brand">
+    <img src="/images/koala-logo.png" alt="TechyKoala">
+    <div class="footer-brand-text"><span>Techy</span>Koala</div>
+  </div>
+  <p>&copy; 2025 TechyKoala. Copenhagen, Denmark.</p>
+</footer>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Get In Touch</h2>
-                <div class="grid grid-3">
-                    <div class="card">
-                        <h3>📧 General</h3>
-                        <a href="/cdn-cgi/l/email-protection#c7a4a8a9b3a6a4b387b3a2a4afbeaca8a6aba6e9a4a8aa"><span class="__cf_email__" data-cfemail="c4a7abaab0a5a7b084b0a1a7acbdafaba5a8a5eaa7aba9">[email&#160;protected]</span></a>
-                    </div>
-                    <div class="card">
-                        <h3>💼 Business</h3>
-                        <a href="/cdn-cgi/l/email-protection#a7c5d2d4cec9c2d4d4e7d3c2c4cfdeccc8c6cbc689c4c8ca"><span class="__cf_email__" data-cfemail="96f4e3e5fff8f3e5e5d6e2f3f5feeffdf9f7faf7b8f5f9fb">[email&#160;protected]</span></a>
-                    </div>
-                    <div class="card">
-                        <h3>🛠️ Support</h3>
-                        <a href="/cdn-cgi/l/email-protection#added8ddddc2dfd9edd9c8cec5d4c6c2ccc1cc83cec2c0"><span class="__cf_email__" data-cfemail="186b6d6868776a6c586c7d7b70617377797479367b7775">[email&#160;protected]</span></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+<script>
+  // Nav color switch after hero
+  const heroEl = document.querySelector('.hero');
+  const navEl = document.querySelector('nav');
+  const navBrand = document.querySelector('.nav-brand-text');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const navBurger = document.querySelectorAll('.nav-hamburger span');
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <div class="footer-logo">
-                        <img src="https://tpjsebutbieghpmvpktv.supabase.co/storage/v1/object/public/AppIcon/techykoalaIcon.png" alt="TechyKoala">
-                        <span>TechyKoala</span>
-                    </div>
-                    <p>Building apps that bring people closer together</p>
-                </div>
-                <div>
-                    <h4>Products</h4>
-                    <ul>
-                        <li><a href="/Connect/">Connect</a></li>
-                        <li><a href="#products">Coming Soon</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#story">Story</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Legal</h4>
-   
+  const navObserver = new IntersectionObserver((entries) => {
+    if (!entries[0].isIntersecting) {
+      navEl.style.background = 'rgba(250, 248, 244, 0.92)';
+      navEl.style.borderBottom = '1px solid rgba(0,0,0,0.06)';
+      navBrand.style.color = '#6b5244';
+      navBrand.querySelector('span').style.color = '#6b5244';
+      navLinks.forEach(a => { a.style.color = '#9a918a'; });
+      navBurger.forEach(s => { s.style.background = '#1a2b1f'; });
+    } else {
+      navEl.style.background = 'rgba(26, 21, 18, 0.8)';
+      navEl.style.borderBottom = '1px solid rgba(255,255,255,0.06)';
+      navBrand.style.color = '#c4a882';
+      navBrand.querySelector('span').style.color = '#f5f0eb';
+      navLinks.forEach(a => { a.style.color = 'rgba(255,255,255,0.5)'; });
+      navBurger.forEach(s => { s.style.background = '#f5f0eb'; });
+    }
+  }, { threshold: 0.1 });
+  navObserver.observe(heroEl);
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.value-card, .project-card, .team-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+  document.querySelectorAll('.project-card').forEach((el, i) => { el.style.transitionDelay = i * 0.1 + 's'; });
+  document.querySelectorAll('.value-card').forEach((el, i) => { el.style.transitionDelay = i * 0.08 + 's'; });
+</script>
+</body>
+</html>
