@@ -2,11 +2,11 @@
   "rewrites": [
     {
       "source": "/CPA",
-      "destination": "https://techycpa-3qm2-1hmcwx9ht-markus-merkel-stenhojs-projects.vercel.app/CPA"
+      "destination": "https://techycpa-3qm2.vercel.app/CPA"
     },
     {
       "source": "/CPA/:path*",
-      "destination": "https://techycpa-3qm2-1hmcwx9ht-markus-merkel-stenhojs-projects.vercel.app/CPA/:path*"
+      "destination": "https://techycpa-3qm2.vercel.app/CPA/:path*"
     }
   ],
   "headers": [
