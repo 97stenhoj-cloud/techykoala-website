@@ -422,12 +422,6 @@
   /* =================== PROJECTS =================== */
   .projects-inner { max-width: 1100px; margin: 0 auto; }
   .projects-header { text-align: center; margin-bottom: 3rem; }
-  .projects-header .section-title span {
-    background: linear-gradient(135deg, var(--connect-pink), var(--trading-blue), var(--content-orange));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
 
   .projects-grid {
     display: grid;
@@ -437,75 +431,109 @@
 
   .project-card {
     padding: 2.25rem 2rem;
-    border-radius: 20px;
-    border: 1px solid var(--card-border);
-    background: #fff;
-    transition: all 0.35s ease;
-    position: relative;
-    overflow: hidden;
+    border-radius: 16px;
+    transition: all 0.4s ease;
     display: flex;
     flex-direction: column;
-    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.05);
   }
   .project-card::before {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 3px;
-    border-radius: 20px 20px 0 0;
-    transition: height 0.35s;
+    transition: height 0.4s ease;
   }
-  .project-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+  .project-card:hover { transform: translateY(-6px); }
 
-  .card-connect { background: linear-gradient(180deg, var(--connect-pink-bg) 0%, #fff 40%); }
-  .card-connect::before { background: linear-gradient(90deg, var(--connect-pink), #ff8ec4); }
+  /* Connect - pink/peach/purple blend */
+  .card-connect {
+    background: linear-gradient(165deg, #382838 0%, #2e2035 30%, #2a1e30 100%);
+    box-shadow: inset 0 0 60px rgba(232, 140, 165, 0.06);
+  }
+  .card-connect::before {
+    background: linear-gradient(90deg, #f28ba5, #e8a0c0, #c9a0e0);
+  }
+  .card-connect:hover {
+    box-shadow: inset 0 0 60px rgba(232, 140, 165, 0.06), 0 16px 48px rgba(232, 140, 165, 0.2);
+  }
 
-  .card-trading { background: linear-gradient(180deg, var(--trading-blue-bg) 0%, #fff 40%); }
-  .card-trading::before { background: linear-gradient(90deg, var(--trading-blue), #6babf7); }
+  /* Content Studio - deep bronze/copper */
+  .card-content {
+    background: linear-gradient(165deg, #302420 0%, #241c18 100%);
+    box-shadow: inset 0 0 60px rgba(180, 120, 80, 0.04);
+  }
+  .card-content::before {
+    background: linear-gradient(90deg, #b47850, #c89878, #b88868);
+  }
+  .card-content:hover {
+    box-shadow: inset 0 0 60px rgba(180, 120, 80, 0.04), 0 16px 48px rgba(180, 120, 80, 0.18);
+  }
 
-  .card-content { background: linear-gradient(180deg, var(--content-orange-bg) 0%, #fff 40%); }
-  .card-content::before { background: linear-gradient(90deg, var(--content-orange), #ffbd70); }
+  /* Trading - dark sage/teal */
+  .card-trading {
+    background: linear-gradient(165deg, #2a3634 0%, #1c2826 100%);
+  }
+  .card-trading::before {
+    background: linear-gradient(90deg, #8aab9a, #a8c4b4);
+  }
+  .card-trading:hover {
+    box-shadow: 0 16px 48px rgba(42, 54, 52, 0.35);
+  }
 
   .project-icon {
     width: 50px; height: 50px;
-    border-radius: 14px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 1.2rem;
   }
-  .card-connect .project-icon { background: rgba(255, 107, 157, 0.15); }
-  .card-trading .project-icon { background: rgba(59, 143, 240, 0.15); }
-  .card-content .project-icon { background: rgba(245, 158, 66, 0.15); }
+  .card-connect .project-icon { background: rgba(232, 140, 165, 0.18); }
+  .card-content .project-icon { background: rgba(180, 120, 80, 0.15); }
+  .card-trading .project-icon { background: rgba(138, 171, 154, 0.12); }
 
   .project-status {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    font-size: 0.68rem;
+    font-size: 0.65rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     margin-bottom: 0.85rem;
-    padding: 0.3rem 0.7rem;
+    padding: 0.3rem 0.75rem;
     border-radius: 100px;
     width: fit-content;
   }
-  .status-live { background: var(--soft-green); color: #c4a882; }
-  .status-soon { background: var(--content-orange-bg); color: #c07520; }
+  .status-live {
+    background: rgba(242, 139, 165, 0.15);
+    color: #f2a0b8;
+  }
+  .status-live .status-dot { background: #f28ba5; }
+  .status-live-bronze {
+    background: rgba(200, 152, 120, 0.14);
+    color: #c89878;
+  }
+  .status-live-bronze .status-dot { background: #b47850; }
+  .status-soon-sage {
+    background: rgba(138, 171, 154, 0.12);
+    color: #a8c4b4;
+  }
+  .status-soon-sage .status-dot { background: #8aab9a; }
   .status-dot { width: 5px; height: 5px; border-radius: 50%; }
-  .status-live .status-dot { background: #c4a882; }
-  .status-soon .status-dot { background: var(--content-orange); }
 
   .project-card h3 {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-dark);
+    font-size: 1.35rem;
+    margin-bottom: 0.6rem;
+    color: #f5f0eb;
   }
-  .project-card p { color: var(--text-body); font-size: 0.92rem; line-height: 1.6; flex-grow: 1; }
+  .project-card p { color: rgba(245, 240, 235, 0.55); font-size: 0.92rem; line-height: 1.65; flex-grow: 1; }
 
   .project-link {
     margin-top: 1.5rem;
@@ -513,14 +541,14 @@
     align-items: center;
     gap: 0.5rem;
     font-weight: 700;
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     text-decoration: none;
-    transition: all 0.2s;
+    transition: all 0.25s;
   }
   .project-link:hover { gap: 0.8rem; }
-  .card-connect .project-link { color: var(--connect-pink); }
-  .card-trading .project-link { color: var(--trading-blue); }
-  .card-content .project-link { color: var(--content-orange); }
+  .card-connect .project-link { color: #f2a0b8; }
+  .card-content .project-link { color: #c89878; }
+  .card-trading .project-link { color: #a8c4b4; }
 
   /* =================== TEAM =================== */
   .team-section-wrap {
@@ -734,16 +762,16 @@
       </div>
       <div class="project-card card-content">
         <div class="project-icon">✨</div>
-        <div class="project-status status-soon">
-          <span class="status-dot"></span> Coming Soon
+        <div class="project-status status-live-bronze">
+          <span class="status-dot"></span> Live
         </div>
         <h3>Content Studio</h3>
         <p>Creating content shouldn't feel like a full-time job. We're building a tool that helps you plan, create, and post content automatically — so you can focus on your business while your socials take care of themselves.</p>
-        <a href="#" class="project-link">Stay Tuned →</a>
+        <a href="#" class="project-link">Explore Content Studio →</a>
       </div>
       <div class="project-card card-trading">
         <div class="project-icon">📊</div>
-        <div class="project-status status-soon">
+        <div class="project-status status-soon-sage">
           <span class="status-dot"></span> Coming Soon
         </div>
         <h3>Trading</h3>
