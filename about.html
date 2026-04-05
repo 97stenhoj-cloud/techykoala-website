@@ -158,7 +158,7 @@
 
   /* TEAM PROFILES */
   .team-profiles {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto 4rem;
   }
 
@@ -171,62 +171,77 @@
     margin-bottom: 3rem;
   }
 
-  .profile {
+  .profiles-grid {
     display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     background: rgba(255,255,255,0.08);
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 20px;
-    padding: 3rem;
+    padding: 2.5rem 2rem;
     backdrop-filter: blur(10px);
-    margin-bottom: 2rem;
     transition: all 0.4s ease;
   }
 
   .profile:hover {
-    transform: translateY(-6px) scale(1.01);
+    transform: translateY(-10px) scale(1.02);
     background: rgba(255,255,255,0.12);
     border-color: rgba(255,255,255,0.2);
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
   }
 
   .profile-photo {
-    width: 180px; height: 180px;
+    width: 160px; height: 160px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center top;
     border: 3px solid rgba(196, 168, 130, 0.25);
     box-shadow: 0 4px 16px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
+    margin-bottom: 1.5rem;
   }
 
   .profile:hover .profile-photo {
     transform: scale(1.05);
   }
 
+  .profile-quote {
+    font-style: italic;
+    color: #c4a882;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    padding: 0 0.5rem;
+  }
+
   .profile-info h3 {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: #f5f0eb;
     margin-bottom: 0.3rem;
   }
 
   .profile-role {
     color: #c4a882;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
   }
 
   .profile-info p {
     color: rgba(245, 240, 235, 0.7);
-    font-size: 1.05rem;
-    line-height: 1.75;
+    font-size: 0.95rem;
+    line-height: 1.7;
     margin-bottom: 0.75rem;
   }
 
@@ -267,8 +282,8 @@
   footer p { color: rgba(245, 240, 235, 0.5); font-size: 0.82rem; }
 
   @media (max-width: 768px) {
-    .profile { grid-template-columns: 1fr; text-align: center; justify-items: center; gap: 1.5rem; }
-    .profile-photo { width: 150px; height: 150px; }
+    .profiles-grid { grid-template-columns: 1fr; max-width: 450px; margin: 0 auto; }
+    .profile-photo { width: 140px; height: 140px; }
     .story-card { padding: 2rem 1.5rem; }
     nav { padding: 0.85rem 1.25rem; }
     .nav-links { display: none; }
@@ -317,25 +332,33 @@
   <div class="team-profiles">
     <div class="team-profiles-title">Who We Are</div>
 
-    <div class="profile">
-      <img class="profile-photo" src="/images/markus.png" alt="Markus">
-      <div class="profile-info">
-        <h3>Markus</h3>
-        <div class="profile-role">Co-Founder & Developer</div>
-        <p>Chemical engineer and BIM Manager working with digital construction, automation, and data-driven workflows. Also the developer behind all TechyKoala products.</p>
-        <p>DTU graduate. Loves clean code, fast shipping, and solving problems that shouldn't still exist.</p>
-        <a href="https://www.linkedin.com/in/markus-stenh%C3%B8j-b9b065211/" target="_blank" class="profile-linkedin">Connect on LinkedIn &#8599;</a>
+    <div class="profiles-grid">
+      <div class="profile">
+        <img class="profile-photo" src="/images/markus.png" alt="Markus">
+        <div class="profile-info">
+          <h3>Markus</h3>
+          <div class="profile-role">Co-Founder & Developer</div>
+        </div>
+        <p class="profile-quote">"If it can be automated, it should be. If it can't — challenge accepted."</p>
+        <div class="profile-info">
+          <p>Chemical engineer and BIM Manager working with digital construction, automation, and data-driven workflows. Also the developer behind all TechyKoala products.</p>
+          <p>DTU graduate. Loves clean code, fast shipping, and solving problems that shouldn't still exist.</p>
+          <a href="https://www.linkedin.com/in/markus-stenh%C3%B8j-b9b065211/" target="_blank" class="profile-linkedin">Connect on LinkedIn &#8599;</a>
+        </div>
       </div>
-    </div>
 
-    <div class="profile">
-      <img class="profile-photo" src="/images/otilia.png" alt="Otilia" style="object-position: center 50%;">
-      <div class="profile-info">
-        <h3>Otilia</h3>
-        <div class="profile-role">Co-Founder & Creative Lead</div>
-        <p>Process engineer and pharma consultant, working on large-scale pharmaceutical projects across Denmark. MSc from DTU in Chemical and Biochemical Engineering.</p>
-        <p>The creative force behind TechyKoala. Otilia brings the ideas, the empathy, and the eye for design. Connect was literally built for her.</p>
-        <a href="https://www.linkedin.com/in/otiliatatianamarc/" target="_blank" class="profile-linkedin">Connect on LinkedIn &#8599;</a>
+      <div class="profile">
+        <img class="profile-photo" src="/images/otilia.png" alt="Otilia" style="object-position: center 50%;">
+        <div class="profile-info">
+          <h3>Otilia</h3>
+          <div class="profile-role">Co-Founder & Creative Lead</div>
+        </div>
+        <p class="profile-quote">"The best tools don't just work — they make you feel something."</p>
+        <div class="profile-info">
+          <p>Process engineer and pharma consultant, working on large-scale pharmaceutical projects across Denmark. MSc from DTU in Chemical and Biochemical Engineering.</p>
+          <p>The creative force behind TechyKoala. Brings the ideas, the empathy, and the eye for design. Connect was literally built for her.</p>
+          <a href="https://www.linkedin.com/in/otiliatatianamarc/" target="_blank" class="profile-linkedin">Connect on LinkedIn &#8599;</a>
+        </div>
       </div>
     </div>
   </div>
