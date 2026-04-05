@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — TechyKoala</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', -apple-system, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: #121010;
+    color: #f5f0eb;
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .global-video {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0.55;
+  }
+
+  .global-video-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(160deg, rgba(28,24,21,0.45) 0%, rgba(37,32,25,0.3) 35%, rgba(26,23,20,0.35) 65%, rgba(18,16,16,0.5) 100%);
+    z-index: -1;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    background: rgba(26, 21, 18, 0.8);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+  }
+  .nav-brand img { width: 36px; height: 36px; object-fit: contain; }
+  .nav-brand-text {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: #c4a882;
+  }
+  .nav-brand-text span { color: #f5f0eb; }
+
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: color 0.2s;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  .nav-links a:hover { color: #b8976d; }
+
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+  .nav-hamburger span {
+    width: 22px; height: 2px;
+    background: #f5f0eb;
+    border-radius: 2px;
+  }
+
+  /* MAIN */
+  .page-content {
+    min-height: 100vh;
+    padding: 8rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .page-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #f5f0eb;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .page-subtitle {
+    color: rgba(245, 240, 235, 0.6);
+    font-size: 1.15rem;
+    text-align: center;
+    max-width: 550px;
+    line-height: 1.7;
+    margin-bottom: 3.5rem;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1000px;
+    width: 100%;
+  }
+
+  .contact-info {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .contact-icon {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: rgba(196, 168, 130, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .contact-item h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #f5f0eb;
+    margin-bottom: 0.3rem;
+  }
+
+  .contact-item p, .contact-item a {
+    color: rgba(245, 240, 235, 0.6);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-decoration: none;
+  }
+
+  .contact-item a:hover { color: #c4a882; }
+
+  .linkedin-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(245, 240, 235, 0.6);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+  }
+  .linkedin-link:hover { color: #c4a882; }
+
+  /* FORM */
+  .contact-form-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+  }
+
+  .contact-form-card h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #f5f0eb;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(245, 240, 235, 0.7);
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.06);
+    color: #f5f0eb;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    transition: border-color 0.2s, background 0.2s;
+    outline: none;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #c4a882;
+    background: rgba(255,255,255,0.1);
+  }
+
+  .form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: rgba(245, 240, 235, 0.3);
+  }
+
+  .btn-send {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 14px;
+    border: none;
+    background: #c4a882;
+    color: #1a1512;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  .btn-send:hover {
+    background: #d4b892;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(196, 168, 130, 0.35);
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+  }
+  .footer-brand img { width: 28px; height: 28px; object-fit: contain; }
+  .footer-brand-text {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: #c4a882;
+  }
+  .footer-brand-text span { color: #f5f0eb; }
+  footer p { color: rgba(245, 240, 235, 0.5); font-size: 0.82rem; }
+
+  @media (max-width: 768px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    nav { padding: 0.85rem 1.25rem; }
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+    .nav-links.open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      background: rgba(26, 21, 18, 0.97);
+      backdrop-filter: blur(20px);
+      padding: 1.25rem 1.5rem;
+      gap: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .page-content { padding: 7rem 1.25rem 3rem; }
+  }
+</style>
+</head>
+<body>
+
+<video class="global-video" autoplay muted loop playsinline>
+  <source src="/images/video2.mp4" type="video/mp4">
+</video>
+<div class="global-video-overlay"></div>
+
+<nav>
+  <a href="/" class="nav-brand">
+    <img src="/images/koala-logo.png" alt="TechyKoala">
+    <div class="nav-brand-text"><span>Techy</span>Koala</div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/#vision">Vision</a></li>
+    <li><a href="/#projects">Products</a></li>
+    <li><a href="/#team">Team</a></li>
+    <li><a href="/about">About Us</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="page-content">
+  <h1 class="page-title">Get In Touch</h1>
+  <p class="page-subtitle">Have a question, a collaboration idea, or just want to say hi? We'd love to hear from you.</p>
+
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="contact-item">
+        <div class="contact-icon">&#9993;</div>
+        <div>
+          <h3>Email</h3>
+          <a href="mailto:support@techykoala.com">support@techykoala.com</a>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">&#128205;</div>
+        <div>
+          <h3>Location</h3>
+          <p>Copenhagen, Denmark</p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">&#128101;</div>
+        <div>
+          <h3>Connect With Us</h3>
+          <div class="linkedin-links">
+            <a href="https://www.linkedin.com/in/otiliatatianamarc/" target="_blank" class="linkedin-link">Otilia on LinkedIn &#8599;</a>
+            <a href="https://www.linkedin.com/in/markus-stenh%C3%B8j-b9b065211/" target="_blank" class="linkedin-link">Markus on LinkedIn &#8599;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form-card">
+      <h2>Send Us a Message</h2>
+      <form id="contactForm">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" name="name" placeholder="What's your name?" required>
+        </div>
+        <div class="form-group">
+          <label>Your Email</label>
+          <input type="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" placeholder="Tell us what's on your mind..." required></textarea>
+        </div>
+        <button type="submit" class="btn-send">Send Message</button>
+      </form>
+      <p id="formStatus" style="text-align: center; margin-top: 1rem; color: #c4a882; display: none;"></p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand">
+    <img src="/images/koala-logo.png" alt="TechyKoala">
+    <div class="footer-brand-text"><span>Techy</span>Koala</div>
+  </div>
+  <p>&copy; 2025 TechyKoala. Copenhagen, Denmark.</p>
+</footer>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const status = document.getElementById('formStatus');
+    const name = form.name.value;
+    const email = form.email.value;
+    const message = form.message.value;
+
+    const subject = encodeURIComponent('Contact from ' + name + ' via TechyKoala');
+    const body = encodeURIComponent('From: ' + name + '\nEmail: ' + email + '\n\n' + message);
+    window.location.href = 'mailto:support@techykoala.com?subject=' + subject + '&body=' + body;
+
+    status.textContent = 'Opening your email client...';
+    status.style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
