@@ -37,7 +37,7 @@
   html { scroll-behavior: smooth; }
 
   body {
-    background: var(--cream);
+    background: #121010;
     color: var(--text-dark);
     font-family: var(--font-body);
     overflow-x: hidden;
@@ -114,24 +114,24 @@
     padding: 10rem 2rem 4rem;
     position: relative;
     overflow: hidden;
-    background: #121010;
+    background: transparent;
   }
 
-  .hero-video {
-    position: absolute;
+  .global-video {
+    position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
     object-fit: cover;
-    z-index: 0;
+    z-index: -2;
     opacity: 0.55;
   }
 
-  .hero-video-overlay {
-    position: absolute;
+  .global-video-overlay {
+    position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
     background: linear-gradient(160deg, rgba(28,24,21,0.45) 0%, rgba(37,32,25,0.3) 35%, rgba(26,23,20,0.35) 65%, rgba(18,16,16,0.5) 100%);
-    z-index: 0;
+    z-index: -1;
   }
 
   .hero::before {
@@ -350,15 +350,15 @@
     font-size: clamp(2rem, 4.5vw, 3.2rem);
     line-height: 1.08;
     letter-spacing: -0.03em;
-    color: var(--text-dark);
+    color: #f5f0eb;
     margin-bottom: 1.25rem;
   }
 
   /* =================== VISION =================== */
   .vision-section {
-    background: var(--warm-white);
-    border-top: 1px solid var(--card-border);
-    border-bottom: 1px solid var(--card-border);
+    background: transparent;
+    border-top: none;
+    border-bottom: none;
   }
 
   .vision {
@@ -377,11 +377,11 @@
     line-height: 1.3;
     letter-spacing: -0.02em;
     margin-bottom: 1.25rem;
-    color: var(--text-dark);
+    color: #f5f0eb;
   }
   .vision-text .big-quote .hl { color: #c4a882; }
   .vision-text p {
-    color: var(--text-body);
+    color: rgba(245, 240, 235, 0.7);
     font-size: 1.02rem;
     line-height: 1.7;
     margin-bottom: 0.85rem;
@@ -391,13 +391,13 @@
 
   .value-card {
     padding: 1.35rem 1.6rem;
-    background: #fff;
-    border: 1px solid var(--card-border);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
     border-radius: 16px;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
+    backdrop-filter: blur(10px);
   }
   .value-card::before {
     content: '';
@@ -415,9 +415,9 @@
     font-weight: 700;
     font-size: 1.05rem;
     margin-bottom: 0.35rem;
-    color: var(--text-dark);
+    color: #f5f0eb;
   }
-  .value-card p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.5; }
+  .value-card p { color: rgba(245, 240, 235, 0.6); font-size: 0.88rem; line-height: 1.5; }
 
   /* =================== PROJECTS =================== */
   .projects-inner { max-width: 1100px; margin: 0 auto; }
@@ -552,9 +552,9 @@
 
   /* =================== TEAM =================== */
   .team-section-wrap {
-    background: var(--warm-white);
-    border-top: 1px solid var(--card-border);
-    border-bottom: 1px solid var(--card-border);
+    background: transparent;
+    border-top: none;
+    border-bottom: none;
   }
   .team-inner { max-width: 1100px; margin: 0 auto; }
   .team-header { text-align: center; margin-bottom: 3rem; }
@@ -568,13 +568,13 @@
   }
 
   .team-card {
-    background: #fff;
-    border: 1px solid var(--card-border);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
     border-radius: 20px;
     padding: 2.5rem 2rem;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: var(--shadow-sm);
+    backdrop-filter: blur(10px);
   }
   .team-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 
@@ -597,7 +597,7 @@
     font-family: var(--font-display);
     font-weight: 700;
     font-size: 1.2rem;
-    color: var(--text-dark);
+    color: #f5f0eb;
     margin-bottom: 0.25rem;
   }
   .team-role {
@@ -608,14 +608,14 @@
     letter-spacing: 0.08em;
     margin-bottom: 1rem;
   }
-  .team-card .bio { color: var(--text-body); font-size: 0.92rem; line-height: 1.6; }
+  .team-card .bio { color: rgba(245, 240, 235, 0.7); font-size: 0.92rem; line-height: 1.6; }
 
   /* =================== FOOTER =================== */
   footer {
     padding: 3rem 2rem;
-    border-top: 1px solid var(--card-border);
+    border-top: none;
     text-align: center;
-    background: var(--cream);
+    background: transparent;
   }
   .footer-brand {
     display: inline-flex;
@@ -628,10 +628,10 @@
     font-family: var(--font-display);
     font-weight: 800;
     font-size: 1.15rem;
-    color: #6b5244;
+    color: #c4a882;
   }
-  .footer-brand-text span { color: #6b5244; }
-  footer p { color: var(--text-muted); font-size: 0.82rem; }
+  .footer-brand-text span { color: #f5f0eb; }
+  footer p { color: rgba(245, 240, 235, 0.5); font-size: 0.82rem; }
 
   /* =================== DOT PATTERN =================== */
   .dot-pattern {
@@ -683,7 +683,10 @@
 </head>
 <body>
 
-<div class="dot-pattern"></div>
+<video class="global-video" autoplay muted loop playsinline>
+  <source src="/images/video2.mp4" type="video/mp4">
+</video>
+<div class="global-video-overlay"></div>
 
 <nav>
   <a href="#" class="nav-brand">
@@ -702,10 +705,6 @@
 </nav>
 
 <section class="hero">
-  <video class="hero-video" autoplay muted loop playsinline>
-    <source src="/images/video2.mp4" type="video/mp4">
-  </video>
-  <div class="hero-video-overlay"></div>
   <div class="hero-glow"></div>
   <img class="hero-koala" src="/images/koala-logo-full.png" alt="TechyKoala mascot">
   <div class="hero-content">
@@ -745,7 +744,7 @@
   </div>
 </section>
 
-<section id="projects" style="background: radial-gradient(ellipse at center, #9e968c 0%, #7a7268 40%, #635b52 100%);">
+<section id="projects" style="background: transparent;">
   <div class="projects-inner">
     <div class="projects-header">
       <div class="section-title" style="color: #f5f0eb;">What We're Building</div>
