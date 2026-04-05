@@ -362,35 +362,35 @@
   }
 
   .vision {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 5rem;
     align-items: start;
   }
 
   .vision-text .big-quote {
     font-family: var(--font-display);
-    font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
     font-weight: 700;
     line-height: 1.3;
     letter-spacing: -0.02em;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
     color: #f5f0eb;
   }
   .vision-text .big-quote .hl { color: #c4a882; }
   .vision-text p {
     color: rgba(245, 240, 235, 0.7);
-    font-size: 1.02rem;
-    line-height: 1.7;
-    margin-bottom: 0.85rem;
+    font-size: 1.15rem;
+    line-height: 1.75;
+    margin-bottom: 1rem;
   }
 
   .vision-values { display: grid; gap: 1rem; }
 
   .value-card {
-    padding: 1.35rem 1.6rem;
+    padding: 1.75rem 2rem;
     background: rgba(255,255,255,0.08);
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 16px;
@@ -413,14 +413,14 @@
   .value-card h3 {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: 1.05rem;
-    margin-bottom: 0.35rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
     color: #f5f0eb;
   }
-  .value-card p { color: rgba(245, 240, 235, 0.6); font-size: 0.88rem; line-height: 1.5; }
+  .value-card p { color: rgba(245, 240, 235, 0.6); font-size: 1rem; line-height: 1.6; }
 
   /* =================== PROJECTS =================== */
-  .projects-inner { max-width: 1100px; margin: 0 auto; }
+  .projects-inner { max-width: 1200px; margin: 0 auto; }
   .projects-header { text-align: center; margin-bottom: 3rem; }
 
   .projects-grid {
@@ -430,7 +430,7 @@
   }
 
   .project-card {
-    padding: 2.25rem 2rem;
+    padding: 2.75rem 2.25rem;
     border-radius: 16px;
     transition: all 0.4s ease;
     display: flex;
@@ -529,11 +529,11 @@
   .project-card h3 {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: 1.35rem;
-    margin-bottom: 0.6rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
     color: #f5f0eb;
   }
-  .project-card p { color: rgba(245, 240, 235, 0.55); font-size: 0.92rem; line-height: 1.65; flex-grow: 1; }
+  .project-card p { color: rgba(245, 240, 235, 0.55); font-size: 1.02rem; line-height: 1.7; flex-grow: 1; }
 
   .project-link {
     margin-top: 1.5rem;
@@ -556,14 +556,14 @@
     border-top: none;
     border-bottom: none;
   }
-  .team-inner { max-width: 1100px; margin: 0 auto; }
+  .team-inner { max-width: 1200px; margin: 0 auto; }
   .team-header { text-align: center; margin-bottom: 3rem; }
 
   .team-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    max-width: 780px;
+    gap: 2.5rem;
+    max-width: 900px;
     margin: 0 auto;
   }
 
@@ -571,7 +571,7 @@
     background: rgba(255,255,255,0.08);
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 20px;
-    padding: 2.5rem 2rem;
+    padding: 3rem 2.5rem;
     text-align: center;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
@@ -579,7 +579,7 @@
   .team-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 
   .team-photo {
-    width: 110px; height: 110px;
+    width: 140px; height: 140px;
     border-radius: 50%;
     margin: 0 auto 1.25rem;
     object-fit: cover;
@@ -596,9 +596,9 @@
   .team-card h3 {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #f5f0eb;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.35rem;
   }
   .team-role {
     color: #c4a882;
@@ -608,7 +608,7 @@
     letter-spacing: 0.08em;
     margin-bottom: 1rem;
   }
-  .team-card .bio { color: rgba(245, 240, 235, 0.7); font-size: 0.92rem; line-height: 1.6; }
+  .team-card .bio { color: rgba(245, 240, 235, 0.7); font-size: 1.02rem; line-height: 1.7; }
 
   /* =================== FOOTER =================== */
   footer {
@@ -718,9 +718,9 @@
 </section>
 
 <section class="vision-section" id="vision">
+  <div class="section-title" style="color: #f5f0eb; text-align: center; margin-bottom: 3rem;">Our Vision</div>
   <div class="vision">
     <div class="vision-text">
-      <div class="section-label">Our Vision</div>
       <div class="big-quote">
         We build the tools <span class="hl">we wish existed.</span>
       </div>
@@ -784,7 +784,7 @@
 <section class="team-section-wrap" id="team">
   <div class="team-inner">
     <div class="team-header">
-      <div class="section-title" style="color: #3d3830;">The Team</div>
+      <div class="section-title" style="color: #f5f0eb;">The Team</div>
     </div>
     <div class="team-grid">
       <div class="team-card">
