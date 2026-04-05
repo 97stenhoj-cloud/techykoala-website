@@ -409,7 +409,12 @@
     transition: opacity 0.3s;
   }
   .value-card:hover::before { opacity: 1; }
-  .value-card:hover { transform: translateX(4px); box-shadow: var(--shadow-md); }
+  .value-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.2);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
   .value-card h3 {
     font-family: var(--font-display);
     font-weight: 700;
@@ -563,7 +568,12 @@
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
   }
-  .team-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .team-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.2);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
 
   .team-photo {
     width: 140px; height: 140px;
@@ -576,7 +586,6 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   .team-card:hover .team-photo {
-    transform: scale(1.05);
     box-shadow: 0 6px 24px rgba(0,0,0,0.12);
   }
 
