@@ -122,30 +122,29 @@
     text-align: center;
     max-width: 550px;
     line-height: 1.7;
-    margin-bottom: 3.5rem;
+    margin-bottom: 0.75rem;
   }
 
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    max-width: 1000px;
-    width: 100%;
+  .page-email {
+    color: #c4a882;
+    font-size: 0.95rem;
+    text-align: center;
+    margin-bottom: 3rem;
   }
 
-  .contact-info {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 20px;
-    padding: 2.5rem;
-    backdrop-filter: blur(10px);
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  .page-email a {
+    color: #c4a882;
+    text-decoration: none;
+    font-weight: 600;
   }
 
-  .contact-item {
-    display: flex;
+  .page-email a:hover {
+    color: #d4b892;
+    text-decoration: underline;
+  }
+
+  .contact-item-unused {
+    display: none;
     align-items: flex-start;
     gap: 1rem;
   }
@@ -345,38 +344,9 @@
 <div class="page-content">
   <h1 class="page-title">Get In Touch</h1>
   <p class="page-subtitle">Have a question, a collaboration idea, or just want to say hi? We'd love to hear from you.</p>
+  <p class="page-email">or email us directly at <a href="mailto:support@techykoala.com">support@techykoala.com</a></p>
 
-  <div class="contact-grid">
-    <div class="contact-info">
-      <div class="contact-item">
-        <div class="contact-icon">&#9993;</div>
-        <div>
-          <h3>Email</h3>
-          <a href="mailto:support@techykoala.com">support@techykoala.com</a>
-        </div>
-      </div>
-
-      <div class="contact-item">
-        <div class="contact-icon">&#128205;</div>
-        <div>
-          <h3>Location</h3>
-          <p>Copenhagen, Denmark</p>
-        </div>
-      </div>
-
-      <div class="contact-item">
-        <div class="contact-icon">&#128101;</div>
-        <div>
-          <h3>Connect With Us</h3>
-          <div class="linkedin-links">
-            <a href="https://www.linkedin.com/in/otiliatatianamarc/" target="_blank" class="linkedin-link">Otilia on LinkedIn &#8599;</a>
-            <a href="https://www.linkedin.com/in/markus-stenh%C3%B8j-b9b065211/" target="_blank" class="linkedin-link">Markus on LinkedIn &#8599;</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="contact-form-card">
+    <div class="contact-form-card" style="max-width: 550px; width: 100%;">
       <h2>Send Us a Message</h2>
       <form id="contactForm" action="https://formspree.io/f/mzdkkwdj" method="POST">
         <div class="form-group">
@@ -395,7 +365,6 @@
       </form>
       <p id="formStatus" style="text-align: center; margin-top: 1rem; color: #c4a882; display: none;"></p>
     </div>
-  </div>
 </div>
 
 <footer>
