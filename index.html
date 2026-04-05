@@ -437,7 +437,9 @@
     flex-direction: column;
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
   }
   .project-card::before {
     content: '';
@@ -446,41 +448,26 @@
     height: 3px;
     transition: height 0.4s ease;
   }
-  .project-card:hover { transform: translateY(-6px); }
-
-  /* Connect - pink/peach/purple blend */
-  .card-connect {
-    background: linear-gradient(165deg, #382838 0%, #2e2035 30%, #2a1e30 100%);
-    box-shadow: inset 0 0 60px rgba(232, 140, 165, 0.06);
+  .project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.2);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
   }
+
+  /* Connect - colored line */
   .card-connect::before {
     background: linear-gradient(90deg, #f28ba5, #e8a0c0, #c9a0e0);
   }
-  .card-connect:hover {
-    box-shadow: inset 0 0 60px rgba(232, 140, 165, 0.06), 0 16px 48px rgba(232, 140, 165, 0.2);
-  }
 
-  /* Content Studio - deep bronze/copper */
-  .card-content {
-    background: linear-gradient(165deg, #302420 0%, #241c18 100%);
-    box-shadow: inset 0 0 60px rgba(180, 120, 80, 0.04);
-  }
+  /* Content Studio - colored line */
   .card-content::before {
     background: linear-gradient(90deg, #b47850, #c89878, #b88868);
   }
-  .card-content:hover {
-    box-shadow: inset 0 0 60px rgba(180, 120, 80, 0.04), 0 16px 48px rgba(180, 120, 80, 0.18);
-  }
 
-  /* Trading - dark sage/teal */
-  .card-trading {
-    background: linear-gradient(165deg, #2a3634 0%, #1c2826 100%);
-  }
+  /* Trading - colored line */
   .card-trading::before {
     background: linear-gradient(90deg, #8aab9a, #a8c4b4);
-  }
-  .card-trading:hover {
-    box-shadow: 0 16px 48px rgba(42, 54, 52, 0.35);
   }
 
   .project-icon {
