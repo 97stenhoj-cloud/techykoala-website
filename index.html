@@ -92,16 +92,13 @@
   .nav-dropdown {
     position: relative;
   }
-  .nav-dropdown::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0; right: 0;
-    height: 1.5rem;
+  .nav-dropdown {
+    padding-bottom: 1.5rem;
+    margin-bottom: -1.5rem;
   }
   .nav-dropdown-menu {
     position: absolute;
-    top: calc(100% + 1rem);
+    top: 100%;
     left: 50%;
     transform: translateX(-50%) translateY(10px);
     background: rgba(26, 21, 18, 0.95);
