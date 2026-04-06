@@ -95,16 +95,12 @@
   .nav-dropdown {
     position: relative;
   }
-  .nav-dropdown > a {
-    display: block;
-    padding: 1.5rem 0;
-    margin: -1.5rem 0;
-  }
   .nav-dropdown-wrap {
     position: absolute;
-    top: calc(100% - 1rem);
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
+    padding-top: 1rem;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease, visibility 0.2s ease;
@@ -863,8 +859,13 @@
       clearTimeout(closeTimer);
       closeTimer = setTimeout(close, 400);
     };
+    const wrap = dropdown.querySelector('.nav-dropdown-wrap');
     dropdown.addEventListener('mouseenter', open);
     dropdown.addEventListener('mouseleave', scheduleClose);
+    if (wrap) {
+      wrap.addEventListener('mouseenter', open);
+      wrap.addEventListener('mouseleave', scheduleClose);
+    }
     // Toggle on click for the trigger
     trigger.addEventListener('click', (e) => {
       if (window.innerWidth < 900) {
