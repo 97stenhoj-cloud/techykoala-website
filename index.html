@@ -105,8 +105,7 @@
     visibility: hidden;
     transition: opacity 0.25s ease, visibility 0.25s ease;
   }
-  .nav-dropdown:hover .nav-dropdown-wrap,
-  .nav-dropdown-wrap:hover {
+  .nav-dropdown.open .nav-dropdown-wrap {
     opacity: 1;
     visibility: visible;
   }
@@ -842,6 +841,22 @@
 </footer>
 
 <script>
+  // Dropdown menu hover handling with delay
+  (function() {
+    const dropdown = document.querySelector('.nav-dropdown');
+    if (!dropdown) return;
+    let closeTimer = null;
+    const open = () => {
+      clearTimeout(closeTimer);
+      dropdown.classList.add('open');
+    };
+    const scheduleClose = () => {
+      closeTimer = setTimeout(() => dropdown.classList.remove('open'), 200);
+    };
+    dropdown.addEventListener('mouseenter', open);
+    dropdown.addEventListener('mouseleave', scheduleClose);
+  })();
+
   // Nav color switch after hero
   const heroEl = document.querySelector('.hero');
   const navEl = document.querySelector('nav');
