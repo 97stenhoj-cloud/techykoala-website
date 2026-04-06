@@ -95,12 +95,16 @@
   .nav-dropdown {
     position: relative;
   }
+  .nav-dropdown > a {
+    display: block;
+    padding: 1.5rem 0;
+    margin: -1.5rem 0;
+  }
   .nav-dropdown-wrap {
     position: absolute;
-    top: 100%;
+    top: calc(100% - 1rem);
     left: 50%;
     transform: translateX(-50%);
-    padding-top: 0.5rem;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease, visibility 0.2s ease;
