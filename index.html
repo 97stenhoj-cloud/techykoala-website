@@ -1054,6 +1054,15 @@
 </footer>
 
 <script>
+  // Duplicate marquee cards to ensure full coverage
+  document.querySelectorAll('.marquee-track').forEach(track => {
+    const original = Array.from(track.children);
+    // Add 3 more copies for safety on wide screens
+    for (let i = 0; i < 3; i++) {
+      original.forEach(card => track.appendChild(card.cloneNode(true)));
+    }
+  });
+
   // Nav color switch after hero
   const heroEl = document.querySelector('.hero');
   const navEl = document.querySelector('nav');
