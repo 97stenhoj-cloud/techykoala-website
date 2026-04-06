@@ -100,17 +100,18 @@
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    padding-top: 1.5rem;
+    padding-top: 0.5rem;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.25s ease, visibility 0.25s ease;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 200;
   }
   .nav-dropdown.open .nav-dropdown-wrap {
     opacity: 1;
     visibility: visible;
   }
   .nav-dropdown-menu {
-    background: rgba(26, 21, 18, 0.95);
+    background: rgba(26, 21, 18, 0.98);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 12px;
@@ -841,20 +842,36 @@
 </footer>
 
 <script>
-  // Dropdown menu hover handling with delay
+  // Dropdown menu: open on hover or click
   (function() {
     const dropdown = document.querySelector('.nav-dropdown');
     if (!dropdown) return;
+    const trigger = dropdown.querySelector('a');
     let closeTimer = null;
     const open = () => {
       clearTimeout(closeTimer);
       dropdown.classList.add('open');
     };
+    const close = () => {
+      dropdown.classList.remove('open');
+    };
     const scheduleClose = () => {
-      closeTimer = setTimeout(() => dropdown.classList.remove('open'), 200);
+      clearTimeout(closeTimer);
+      closeTimer = setTimeout(close, 400);
     };
     dropdown.addEventListener('mouseenter', open);
     dropdown.addEventListener('mouseleave', scheduleClose);
+    // Toggle on click for the trigger
+    trigger.addEventListener('click', (e) => {
+      if (window.innerWidth < 900) {
+        e.preventDefault();
+        dropdown.classList.toggle('open');
+      }
+    });
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target)) close();
+    });
   })();
 
   // Nav color switch after hero
